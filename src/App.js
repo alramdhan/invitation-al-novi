@@ -2,6 +2,8 @@ import AOS from 'aos';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { Component } from 'react';
 import WelcomeModal from './Welcome.js';
 
@@ -24,7 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='App' style={{float: 'left'}}>
+      <div className='App'>
         <nav className='navbar bg-dark navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu'>
           <ul className="navbar-nav nav-justified w-100 align-items-center">
             <li className="nav-item">
@@ -63,7 +65,7 @@ class App extends Component {
         <main className='container bg-dark text-light' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
           <section className='container' id='home'>
             <div className="text-center pt-4">
-              <h1 className="font-esthetic my-4" style={{fontSize: 2.5+"rem"}}>Undangan Pernikahan</h1>
+              <h1 className="font-esthetic text-burgundy my-4" style={{fontSize: 2.5+"rem"}}>Undangan Pernikahan</h1>
 
               <div className="py-4">
                 <div className="img-crop border border-3 border-light shadow mx-auto">
@@ -75,7 +77,7 @@ class App extends Component {
               <p className="mb-0" style={{fontSize: 1.5+"rem"}}>Minggu, 23 Juni 2024</p>
 
               <a className="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank" rel='noreferrer' href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Wahyu%20and%20Riski&details=The%20Wedding%20of%20Wahyu%20and%20Riski%20%7C%2015%20Maret%202023%20%7C%20RT%2010%20RW%2002,%20Desa%20Pajerukan,%20Kec.%20Kalibagor,%20Kab.%20Banyumas,%20Jawa%20Tengah%2053191%20%7C%2010.00%20-%2011.00%20WIB&dates=20230315T100000/20230315T110000&location=https://goo.gl/maps/ALZR6FJZU3kxVwN86">
-                <i className="fa-solid fa-calendar-check me-2"></i>Save The Date
+                <FontAwesomeIcon icon={faCalendar} />&nbsp;Save The Date
               </a>
 
               <div className="d-flex justify-content-center align-items-center mt-4 mb-2">
