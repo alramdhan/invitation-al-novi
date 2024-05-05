@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import './App.css';
 import {
-  BrowserRouter,
   Routes,
   Route,
+  BrowserRouter,
 } from 'react-router-dom'
 import { Component } from 'react';
 import WelcomeModal from './Welcome.js';
@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/wedding_invitation"
           element={<InvitationPage />} />
       </Routes>
     </BrowserRouter>
@@ -30,7 +30,6 @@ class InvitationPage extends Component {
   render() {
     return (
       <div className='App' style={{float: 'left'}}>
-        <title>Undangan Pernikahan Al dan Novi</title>
         <nav className='navbar bg-dark navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu'>
           <ul className="navbar-nav nav-justified w-100 align-items-center">
             <li className="nav-item">
