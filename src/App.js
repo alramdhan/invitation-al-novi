@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/invitation"
+          path="/"
           element={<InvitationPage />} />
       </Routes>
     </BrowserRouter>
