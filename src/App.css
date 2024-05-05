@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.font-esthetic {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #E2E2EF !important;
+}
+
+.tutup-welcome {
+  transform: translateY(0);
+  animation: 3s in-out forwards;
+}
+
+@keyframes in-out {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
