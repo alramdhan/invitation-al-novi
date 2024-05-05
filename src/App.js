@@ -2,27 +2,22 @@ import AOS from 'aos';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import './App.css';
-import {
-  Routes,
-  Route,
-  BrowserRouter,
-} from 'react-router-dom'
 import { Component } from 'react';
 import WelcomeModal from './Welcome.js';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/wedding_invitation"
-          element={<InvitationPage />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
+// function App() {
+//   return (
+//     <>
+//       <Routes>
+//         <Route
+//           path="/wedding_invitation"
+//           element={<InvitationPage />} />
+//       </Routes>
+//     </>
+//   );
+// }
 
-class InvitationPage extends Component {
+class App extends Component {
   componentDidMount() {
     AOS.init();
   }
