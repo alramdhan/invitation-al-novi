@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/wedding_invitation/static/css/main.2deb7158.css",
-    "main.js": "/wedding_invitation/static/js/main.e7c54c4e.js",
-    "static/js/453.40063271.chunk.js": "/wedding_invitation/static/js/453.40063271.chunk.js",
-    "static/media/bunga1.png": "/wedding_invitation/static/media/bunga1.824734f36a59b5167862.png",
+    "main.css": "/wedding_invitation/static/css/main.04c5dc83.css",
+    "main.js": "/wedding_invitation/static/js/main.b0eadc9f.js",
+    "static/js/453.66636984.chunk.js": "/wedding_invitation/static/js/453.66636984.chunk.js",
+    "static/media/img-cincin.png": "/wedding_invitation/static/media/img-cincin.44d0ef11cda4c3c049d9.png",
+    "static/media/half-couple.png": "/wedding_invitation/static/media/half-couple.6d2f313edf30abd3bfd9.png",
+    "static/media/cincin1.png": "/wedding_invitation/static/media/cincin1.3c269f943dbc1e1a6c49.png",
+    "static/media/bg-mempelai1.png": "/wedding_invitation/static/media/bg-mempelai1.1a7a987edcbf80e95c84.png",
+    "static/media/bg-mempelai2.png": "/wedding_invitation/static/media/bg-mempelai2.b1e9cf5d112bedc7724f.png",
+    "static/media/bg1.jpg": "/wedding_invitation/static/media/bg1.44944320f0fd3edc9e61.jpg",
+    "static/media/bismillah.png": "/wedding_invitation/static/media/bismillah.0409112926964bb8fc1c.png",
+    "static/media/layer-ayat.png": "/wedding_invitation/static/media/layer-ayat.0395da094b9d0c34cabc.png",
+    "static/media/bg2.jpg": "/wedding_invitation/static/media/bg2.f384f16fc728468a7a95.jpg",
     "index.html": "/wedding_invitation/index.html",
-    "main.2deb7158.css.map": "/wedding_invitation/static/css/main.2deb7158.css.map",
-    "main.e7c54c4e.js.map": "/wedding_invitation/static/js/main.e7c54c4e.js.map",
-    "453.40063271.chunk.js.map": "/wedding_invitation/static/js/453.40063271.chunk.js.map"
+    "static/media/instagram.svg": "/wedding_invitation/static/media/instagram.da7c8b906a74d96374903698f965002d.svg",
+    "main.04c5dc83.css.map": "/wedding_invitation/static/css/main.04c5dc83.css.map",
+    "main.b0eadc9f.js.map": "/wedding_invitation/static/js/main.b0eadc9f.js.map",
+    "453.66636984.chunk.js.map": "/wedding_invitation/static/js/453.66636984.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2deb7158.css",
-    "static/js/main.e7c54c4e.js"
+    "static/css/main.04c5dc83.css",
+    "static/js/main.b0eadc9f.js"
   ]
 }
