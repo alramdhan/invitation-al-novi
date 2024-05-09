@@ -1,92 +1,475 @@
+import { Component } from 'react';
 import AOS from 'aos';
+import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar } from '@fortawesome/free-solid-svg-icons';
-import { Component } from 'react';
-import WelcomeModal from './Welcome.js';
 
-// function App() {
-//   return (
-//     <>
-//       <Routes>
-//         <Route
-//           path="/wedding_invitation"
-//           element={<InvitationPage />} />
-//       </Routes>
-//     </>
-//   );
-// }
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCalendar,
+  faHome,
+  faComment,
+  faClock,
+  faMap,
+  faCopy,
+  faGift,
+  faGifts
+} from '@fortawesome/free-solid-svg-icons';
+import IG from './images/instagram.svg';
+import mempelai from './images/mempelai.png';
+import countdown from './images/countdown.png';
+// main
+import Cincin1 from './images/cincin1.png';
+import WelcomeModal from './Welcome.js';
+import Bismillah from './images/bismillah.png';
+import Bunga1 from './images/bg-mempelai1.png';
+import Bunga2 from './images/bg-mempelai2.png';
+import MempelaiCowo from './images/half-couple.png';
+import { Badge, Button, Card, Form } from 'react-bootstrap';
+import axios from 'axios';
 
 class App extends Component {
   componentDidMount() {
-    AOS.init();
+    AOS.init(); 
   }
 
+  constructor(props) {
+    super(props);
+  }
+  
   render() {
+    async function uploadFilesToGoogleDrive() {
+      const res = await axios.patch(
+        "https://api.jsonsilo.com/api/v1/manage/cc736e94-4752-44df-a877-2343cf4cfe88",
+        {
+          method: "patch",
+          headers: {
+            'X-MAN-API': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3V1aWQiOiJWRllpWDZQWEVYVnFid21wREdpQXRRWDM1NTEzIiwiaXNzIjoiaHR0cHM6Ly9qc29uc2lsby5jb20iLCJleHAiOjE3MTc4Mzc4NDB9.XhqrVeFGXd9hImQOSDuTAAFvlu3YWhb1LZ4Ey4mH0cg',
+            'Content-Type': 'application/json',
+          },
+          params: {
+            "file_data": {
+              "ucapan": [{
+                "name": "Al",
+                "ucapan": "Selamat",
+                "absen": 1
+              }]
+            },
+          }
+        }
+      );
+
+      console.log("res", res);
+    }
+
+    const until = "2024-06-21T09:00:00";
+    const count = (new Date(until)).getTime();
+    
+    setInterval(() => {
+      const distance = Math.abs(count - (new Date()).getTime());
+
+      document.getElementById('day').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById('hour').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById('minute').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.getElementById('second').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+    }, 1000);
+
     return (
       <div className='App'>
-        <nav className='navbar bg-dark navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu'>
-          <ul className="navbar-nav nav-justified w-100 align-items-center">
-            <li className="nav-item">
-                <a className="nav-link" href="#home">
-                    <i className="fa-solid fa-house"></i>
-                    <span className="d-block" style={{fontSize: 0.7 + "rem"}}>Home</span>
-                </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#mempelai">
-                    <i className="fa-solid fa-user-group"></i>
-                    <span className="d-block" style={{fontSize: 0.7 + "rem"}}>Mempelai</span>
-                </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#tanggal">
-                    <i className="fa-solid fa-calendar-check"></i>
-                    <span className="d-block" style={{fontSize: 0.7 + "rem"}}>Tanggal</span>
-                </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#galeri">
-                    <i className="fa-solid fa-images"></i>
-                    <span className="d-block" style={{fontSize: 0.7 + "rem"}}>Galeri</span>
-                </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#ucapan">
-                    <i className="fa-solid fa-comments"></i>
-                    <span className="d-block" style={{fontSize: 0.7 + "rem"}}>Ucapan</span>
-                </a>
-            </li>
-          </ul>
-        </nav>
+        <main className='container-main' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
+          <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
+            <ul className="navbar-nav nav-justified w-100 align-items-center">
+              <li className="nav-item">
+                  <a className="nav-link" href="#home">
+                      {/* <i className="fa-solid fa-house"></i> */}
+                      <FontAwesomeIcon icon={faHome} color='#EEE' />
+                      <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Home</span>
+                  </a>
+              </li>
+              <li className="nav-item">
+                  <a className="nav-link" href="#mempelai">
+                      {/* <i className="fa-solid fa-user-group"></i> */}
+                      {/* <FontAwesomeIcon icon={faUserGroup} color='#EEE' /> */}
+                      <img width={25} src={mempelai} alt="mempelai" />
+                      <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Mempelai</span>
+                  </a>
+              </li>
+              <li className="nav-item">
+                  <a className="nav-link" href="#tanggal">
+                      <img width={25} src={countdown} alt="countdown" />
+                      <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Tanggal</span>
+                  </a>
+              </li>
+              <li className="nav-item">
+                  <a className="nav-link" href="#gift">
+                      <FontAwesomeIcon icon={faGift} color="#EEE" />
+                      <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Gift</span>
+                  </a>
+              </li>
+              <li className="nav-item">
+                  <a className="nav-link" href="#ucapan">
+                      {/* <i className="fa-solid fa-comments"></i> */}
+                      <FontAwesomeIcon icon={faComment} color='#EEE' />
+                      <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Ucapan</span>
+                  </a>
+              </li>
+            </ul>
+          </nav>
+        
+          <section className='bg1' id='home'>
+            <div className="w-100 text-center pt-4">
+              <h1 className="font-esthetic text-burgundy my-4 mb-4" style={{fontSize: 2.5+"rem"}}></h1>
 
-        <main className='container bg-dark text-light' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
-          <section className='container' id='home'>
-            <div className="text-center pt-4">
-              <h1 className="font-esthetic text-burgundy my-4" style={{fontSize: 2.5+"rem"}}>Undangan Pernikahan</h1>
-
-              <div className="py-4">
-                <div className="img-crop border border-3 border-light shadow mx-auto">
-                  <img width={150} height={150} src="" alt="bg" />
+              <div className="">
+                <div className="img-crop mx-auto foto-home">
+                  <img className="couple-foto" src={Cincin1} alt="bg" />
                 </div>
               </div>
 
-              <h1 className="font-esthetic my-4" style={{fontSize: 3+"rem"}}>Al & Novi</h1>
-              <p className="mb-0" style={{fontSize: 1.5+"rem"}}>Minggu, 23 Juni 2024</p>
+              <h1 className="font-esthetic title-pengantin" style={{fontSize: 3+"rem"}}>Al & Novi</h1>
+              <p className="mb-0" style={{fontSize: 1.5+"rem"}}>Jum&apos;at, 21 Juni 2024</p>
 
-              <a className="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2" target="_blank" rel='noreferrer' href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Wahyu%20and%20Riski&details=The%20Wedding%20of%20Wahyu%20and%20Riski%20%7C%2015%20Maret%202023%20%7C%20RT%2010%20RW%2002,%20Desa%20Pajerukan,%20Kec.%20Kalibagor,%20Kab.%20Banyumas,%20Jawa%20Tengah%2053191%20%7C%2010.00%20-%2011.00%20WIB&dates=20230315T100000/20230315T110000&location=https://goo.gl/maps/ALZR6FJZU3kxVwN86">
+              <a className="btn btn-sm shadow btn-outline-burgundy rounded-pill px-3 my-2" target="_blank" rel='noreferrer' href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MWpvbzRmcjhpcGFiZWVzcnJvMDY4cXJqZDggYWwucmFtZGhhbjMxMkBt&tmsrc=al.ramdhan312%40gmail.com">
                 <FontAwesomeIcon icon={faCalendar} />&nbsp;Save The Date
               </a>
 
-              <div className="d-flex justify-content-center align-items-center mt-4 mb-2">
-                <div className="mouse-animation border border-2">
+              <div className="d-flex justify-content-center align-items-center mt-2 mb-2 mouse-scroll-home">
+                <div className="mouse-animation border border-2 border-dark">
                   <div className="scroll-animation"></div>
                 </div>
               </div>
 
-              <p className="m-0">Scroll Down</p>
+              <p className="m-0 pb-3 scroll-down">Scroll Down</p>
+            </div>
+          </section>
+          <section className='bg2' id="mempelai">
+            <div className='w-100 text-center pt-1' style={{marginBottom: 40}}>
+              <img data-aos="fade-up" data-delay="1000" data-aos-duration="1000" src={Bismillah} alt="bismillah" />
+
+              <h3 data-aos="fade-up" data-delay="1000" data-aos-duration="1000" className="font-esthetic" style={{fontSize: 2+"rem"}}>Assalamu&apos;alaikum Wr. Wb.</h3>
+              <p data-aos="fade-up" data-delay="1000" data-aos-duration="1000">
+                Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta Kerabat sekalian untuk menghadiri Syukuran P  ernikahan kami:
+              </p>
+              <div className="position-relative">
+                <div className="position-absolute" style={{top: "0%", left: "10%"}}>
+                  <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
+                  </svg>
+                </div>
+              </div>
+              <div className="layer-sangmempelai">
+                <div>
+                  <img data-aos="fade-left" data-delay="1000" data-aos-duration="1000" width={100} height={100} src={MempelaiCowo} alt="mempelai Pria" />
+                  <p data-aos="flip-right" data-delay="1000" data-aos-duration="1000">Dika Alfarell Haidir Ramdani</p>
+                  <span data-aos="fade-up" data-delay="1000" data-aos-duration="1000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
+                    Putra pertama dari <br /><font style={{color: "#800020", fontSize: "1.7rem"}}>Bapak Yul Haidir &amp; Ibu Suparti</font>
+                  </span>
+                  <div id="social-media-dika">
+                    <ul className="fh5co-social-icons">
+                      <li><a target="_blank" href="https://www.instagram.com/"><img width={15} src={IG} alt="instagram" /></a></li>
+                    </ul>
+                  </div>
+                  <div className="position-relative">
+                    <div className="position-absolute" style={{top: "0%", right: "10%"}}>
+                      <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <h1 data-aos="flip-up" data-delay="1000" data-aos-duration="1000" className='my-2'>&amp;</h1>
+                  <img data-aos="fade-right" data-delay="1000" data-aos-duration="1000" width={100} height={100} src={MempelaiCowo} alt="mempelai Pria" />
+                  <div className="position-relative">
+                    <div className="position-absolute" style={{top: "0%", left: "10%"}}>
+                      <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <p data-aos="flip-left" data-delay="1000" data-aos-duration="1000">Siti Novi Nurkomala</p>
+                  <span data-aos="fade-up" data-delay="1000" data-aos-duration="1000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
+                    Putri kedua dari <br /><font style={{color: "#800020", fontSize: "1.7rem"}}>Bapak Taufik Hidayat &amp; Ibu Yoyoh</font>
+                  </span>
+                  <div id="social-media-novi">
+                    <ul className="fh5co-social-icons">
+                      <li><a target="_blank" href="https://www.instagram.com/"><img width={15} src={IG} alt="instagram" /></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <img width="100%" src={Bunga2} alt="bunga 2" />
+              </div>
+              <div className='layer-mempelai-bottom d-flex align-items-center justify-content-center'>
+                <p data-aos="zoom-in" data-delay="1000" data-aos-duration="1000">
+                  <br />
+                  <span className="ayat-title">Allah SWT Berfirman</span><br /><br />
+                  Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+                  jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
+                  rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
+                  (kebesaran Allah) bagi kaum yang berpikir.<br /> <br />
+                  <span className='ayat-endtitle'>QS. Ar-Rum Ayat 21</span>
+                </p>
+              </div>
+              <div className="position-relative">
+                <div className="position-absolute" style={{top: "0%", left: "5%"}}>
+                  <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                    <path fillRule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="bg2" id="countdown">
+            <div className='text-center'>
+              <h1 data-aos="zoom-in" data-aos-duration="1000">Waktu Menuju Acara</h1>
+              <h5 className='text-secondary'>21/06/2024</h5>
+              <div  data-aos="zoom-in" data-aos-duration="1000" style={{
+                border: "1px solid #800020",
+                borderRadius: "50px",
+                padding: "10px 0",
+                margin: 0,
+              }}>
+                <table className='table table-borderless p-0 m-0' id="table-countdown">
+                  <tbody>
+                    <tr>
+                      <td valign='middle' align='center'>
+                        <div className="container-countdown">
+                          <span id="day"></span> Hari
+                        </div>
+                      </td>
+                      <td valign='middle' align='center'>
+                        <div className="container-countdown">
+                          <span id="hour"></span> <br />Jam
+                        </div>
+                      </td>
+                      <td valign='middle' align='center'>
+                        <div className="container-countdown">
+                          <span id="minute"></span> Menit
+                        </div>
+                      </td>
+                      <td valign='middle' align='center'>
+                        <div className="container-countdown">
+                          <span id="second"></span> Detik
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p data-aos="fade-down" data-aos-duration="1000" className="mt-4 py-2">
+                Dengan memohon rahmat dan ridho Allah Subhanallahu Wa Ta&apos;ala, Insha Allah kami akan menyelenggarakan
+                acara :
+              </p>
+              <Card data-aos="zoom-in" data-aos-duration="1000" id='acara-syukuran'>
+                <h1 className='font-esthetic'>Syukuran</h1>
+                <hr />
+                <table className='table table-borderless m-0 p-0 w-100' id='table-acara-syukuran'>
+                  <tbody>
+                    <tr className='row'>
+                      <td align='center' valign='middle' className='col-6'>
+                        <FontAwesomeIcon icon={faClock} /><br />
+                        09:00<br />
+                        Selesai
+                      </td>
+                      <td align='center' valign='middle' className='col-6'>
+                        <FontAwesomeIcon icon={faCalendar} /><br />
+                        Jum&apos;at<br />
+                        21 Juni 2024
+                      </td>
+                    </tr>
+                    <tr className='row'>
+                      <td colSpan={2} className='col-12'>
+                        <h4>Kediaman Mempelai Pria</h4>
+                      </td>
+                    </tr>
+                    <tr className='row'>
+                      <td colSpan={2} className='col-12 text-burgundy pt-0 px-4'>
+                        Alamat : Kampung Girang, gg. inpress RT 003/008, Kel. Harjasari, Kec. Bogor Selatan, Kota Bogor 16138
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a target='__blank' rel='noreferrer' href="https://maps.app.goo.gl/1KqpZ42GAwJnyqWy7"><Button className='rounded-pill btn-burgundy'>Lihat Lokasi&nbsp;<FontAwesomeIcon icon={faMap} /></Button></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Card>
+              <Card data-aos="zoom-in" data-aos-duration="1000" id='acara-akad'>
+                <h1 className='font-esthetic'>Akad</h1>
+                <hr />
+                <table className='table table-borderless m-0 p-0 w-100' id='table-acara-akad'>
+                  <tbody>
+                    <tr className='row'>
+                      <td align='center' valign='middle' className='col-6'>
+                        <FontAwesomeIcon icon={faClock} /><br />
+                        09:00<br />
+                        Selesai
+                      </td>
+                      <td align='center' valign='middle' className='col-6'>
+                        <FontAwesomeIcon icon={faCalendar} /><br />
+                        Minggu<br />
+                        23 Juni 2024
+                      </td>
+                    </tr>
+                    <tr className='row'>
+                      <td colSpan={2} className='col-12'>
+                        <h4>Kediaman Mempelai Wanita</h4>
+                      </td>
+                    </tr>
+                    <tr className='row'>
+                      <td colSpan={2} className='col-12 text-burgundy pt-0 px-4'>
+                        Alamat : Jl. Cikopo Selatan, Kp. Munjul RT 002/005, Kec. Megamendung, Kab. Bogor 16770
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a target='__blank' rel='noreferrer' href='https://maps.app.goo.gl/WDMLtLjNt7rDy2do9'><Button className='rounded-pill btn-burgundy'>Lihat Lokasi&nbsp;<FontAwesomeIcon icon={faMap} /></Button></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Card>
+              <Card data-aos="zoom-in" data-aos-duration="1000" id='acara-resepsi'>
+                <h1 className='font-esthetic'>Resepsi</h1>
+                <hr />
+                <table className='table table-borderless m-0 p-0 w-100' id='table-acara-resepsi'>
+                  <tbody>
+                    <tr className='row'>
+                      <td align='center' valign='middle' className='col-6'>
+                        <FontAwesomeIcon icon={faClock} /><br />
+                        10:00<br />
+                        Selesai
+                      </td>
+                      <td align='center' valign='middle' className='col-6'>
+                        <FontAwesomeIcon icon={faCalendar} /><br />
+                        Minggu<br />
+                        23 Juni 2024
+                      </td>
+                    </tr>
+                    <tr className='row'>
+                      <td colSpan={2} className='col-12'>
+                        <h4>Kediaman Mempelai Wanita</h4>
+                      </td>
+                    </tr>
+                    <tr className='row'>
+                      <td colSpan="2" className='col-12 text-burgundy pt-0 px-4'>
+                        Alamat : Jl. Cikopo Selatan, Kp. Munjul RT 002/005, Kec. Megamendung, Kab. Bogor 16770
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a target='__blank' rel='noreferrer' href='https://maps.app.goo.gl/WDMLtLjNt7rDy2do9'><Button className='rounded-pill btn-burgundy'>Lihat Lokasi&nbsp;<FontAwesomeIcon icon={faMap} /></Button></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Card>
+            </div>
+          </section>
+          <section className='bg2' id='gift'>
+            <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" className='text-center' style={{marginTop: 50, marginBottom: 40}}>
+              <div className="position-relative">
+                <div className="bunga-gift">
+                  <img style={{width: "100%"}} src={Bunga1} />
+                </div>
+              </div>
+              <div className='container-gift pb-4' style={{paddingTop: 70}}>
+                <h3 className='font-esthetic text-secondary'>Wedding Gift</h3>
+                <p>Bagi yang ingin memberikan tanda kasih, dapat mengirimkan melalui fitur di bawah ini:</p>
+                <div className="position-relative">
+                  <div className="position-absolute" style={{top: "0%", left: "5%"}}>
+                    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                      <path fill="#EDECF1" fillRule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div className='rekening1'>
+                  BCA<br />
+                  7360721269
+                  <Button className='btn btn-outline bg-transparent border-0'>
+                    <FontAwesomeIcon icon={faCopy} />
+                  </Button><br />
+                  Dika Alfarell Haidir Ramdani
+                </div>
+                <div className="position-relative">
+                  <div className="position-absolute" style={{top: "0%", right: "10%"}}>
+                    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                      <path fill="#EDECF1" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div className='kotak-alamat mt-4 mb-0 pb-0'>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td rowSpan={2}>
+                          <div style={{
+                            backgroundColor: "#BF9B73",
+                            margin: "10px",
+                            border: "1px solid #202020",
+                            borderRadius: 50,
+                            padding: "15px 10px"
+                          }}>
+                            <FontAwesomeIcon icon={faGifts} color="#EEE" style={{fontSize: 48}} />
+                          </div>
+                        </td>
+                        <td>Dika</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p style={{fontSize: 11}}>Kampung Girang, gg. inpess RT 003/008, Kel. Harjasari, Kec. Bogor Selatan, Kota Bogor 16138</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="position-relative">
+                  <div className="position-absolute" style={{top: "0%", left: "10%"}}>
+                    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                      <path fill="#EDECF1" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="bg2" id="ucapan">
+            <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" className='text-center' style={{marginBottom: 110}}>
+              <div className='container-ucapan pb-4'>
+                <h1 className='font-esthetic text-secondary'>Ucapan & do&apos;a</h1>
+                <p>Kirimkan Do&apos;a & Ucapan Untuk Kedua Mempelai</p>
+                <div className='row'>
+                  <div className='col-12'>
+                    <Form.Control placeholder='Nama' color='#BF9B73' id='txt-nama' className='text-form' />
+                  </div>
+                  <div className='col-12 mt-4'>
+                    <Form.Control as="textarea" id="txt-ucapan" placeholder='Berikan Ucapan dan Do&apos;a Restu' />
+                  </div>
+                  <div className='col-12 mt-4'>
+                    <Form.Select id="txt-absen">
+                      <option>...</option>
+                      <option value="1">Hadir</option>
+                      <option value="0">Tidak Hadir</option>
+                    </Form.Select>
+                  </div>
+                  <div className='col-12 mt-4'>
+                    <Button id="btn-beri-ucapan" className='btn btn-burgundy-sec btn-rounded rounded-pill w-100' onClick={uploadFilesToGoogleDrive}>Kirim</Button>
+                  </div>
+                </div>
+                <table id='table-kumpulan-ucapan' className='w-100 mt-4'>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div id='kotak-ucapannya'>
+                          <span>Al <Badge bg='success'>Hadir</Badge></span>
+                          <br />
+                          <span>Ucapannya coy</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         </main>

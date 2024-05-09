@@ -43,6 +43,224 @@ body {
   }
 }
 
+.container-main {
+  width: 50%;
+  margin: auto;
+}
+
+#overlay {
+  background: #ffffff;
+  background-image: url("https://st4.depositphotos.com/24899686/28945/i/450/depositphotos_289450710-stock-photo-the-bride-and-grooms-hands.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  text-align: center !important;
+}
+
+#overlay .content {
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2001;
+  top: 0;
+}
+
+#overlay .content .container {
+  padding-top: 20px;
+}
+
+#overlay .content .couple-main {
+  width: 200px;
+}
+
+#fh5co-header .couple-main {
+  width: 400px;
+}
+
+.foto-home .couple-foto {
+  width: 380px;
+  height: 380px;
+}
+
+.mouse-animation {
+  padding: 0.25rem 0.625rem;
+  height: 2rem;
+  opacity: 0.75;
+  border-radius: 1.4rem;
+  box-sizing: content-box;
+}
+
+.mouse-animation>.scroll-animation {
+  width: 0.25rem;
+  height: 0.625rem;
+  border-radius: 25%;
+  background-color: #808080;
+  animation-name: scroll;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateY(1rem);
+      opacity: 0;
+  }
+
+  10% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 0;
+  }
+}
+
+@keyframes love {
+  50% {
+      transform: translateY(1rem);
+  }
+}
+
+.animate-love {
+  animation: love 5s ease-in-out infinite;
+}
+
+/* @media screen and (min-width: 400px) {
+  .container-main {
+    width: 100%;
+  }
+
+  .title-pengantin {
+    margin-bottom: 25px;
+  }
+
+  .foto-home .couple-foto {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+  }
+
+  .layer-mempelai-bottom {
+    width: 100%;
+    height: 420px;
+    color: #ECEDF1;
+    background: url("./images/layer-ayat.png");
+    background-size: cover;
+    padding: 2rem;
+  }
+} */
+
+.mouse-scroll-home {
+  padding-top: 40px;
+}
+
+@media screen and (min-height: 800px) {
+  .mouse-scroll-home {
+    padding-top: 175px !important;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .scroll-down {
+    padding-bottom: 150px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-main {
+    width: 100% !important;
+    margin: auto;
+  }
+
+  #fh5co-header .couple-main {
+    width: 250px;
+  }
+
+  .foto-home .couple-foto {
+    width: 220px;
+    height: 220px;
+    margin-top: 40px;
+  }
+
+  .layer-sangmempelai {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .layer-mempelai-bottom {
+    width: 100% !important;
+    height: 420px !important;
+    color: #ECEDF1;
+    background: url("./images/layer-ayat.png");
+    background-size: cover;
+    padding: 2rem;
+  }
+
+  #countdown .container-countdown {
+    color: #ECEDF1;
+    width: 76px !important;
+    background-color: #800020;
+    border-radius: 100px;
+    padding: 16px !important;
+    box-shadow: 0 6px 12px #800020;
+  }
+
+  .mouse-scroll-home {
+    padding-top: 60px;
+  }
+}
+
+.layer-sangmempelai {
+  width: 100%;
+  min-height: 300px;
+}
+
+.layer-sangmempelai p {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #800020;
+  margin: 25px 0;
+}
+
+.layer-sangmempelai h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #800020;
+  margin: 40px 0 !important;
+}
+
+.layer-mempelai-bottom {
+  width: 100%;
+  height: 480px;
+  margin: auto;
+  color: #ECEDF1;
+  background: url("./images/layer-ayat.png");
+  background-size: cover;
+  padding: 2rem;
+}
+
+.layer-mempelai-bottom .ayat-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.layer-mempelai-bottom .ayat-endtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
 .border-burgundy {
   border-color: #800020 !important;
 }
@@ -51,16 +269,223 @@ body {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #E2E2EF !important;
+  font-size: 48px;
+  color: #800020 !important;
 }
 
 .text-burgundy {
   color: #800020 !important;
 }
 
+.text-secondary {
+  color: #BF9B73 !important;
+}
+
+.burgundy {
+  background-color: #800020;
+  color: #EEE !important;
+}
+
+.btn-burgundy {
+  border-color: #BF9B73;
+  background-color: #800020;
+  color: #EEE;
+  transition: all 0.3s ease !important;
+}
+
+.btn-burgundy:hover {
+  border: #BF9B73;
+  background-color: #BF9B73;
+  color: #282C34;
+}
+
+.btn-outline-burgundy {
+  border: 1px solid #800020;
+}
+
+.btn-outline-burgundy:hover {
+  border: 1px solid #BF9B73;
+}
+
+.btn-burgundy-sec {
+  border-color: #200E10;
+  background-color: #BF9B73;
+  color: #800020;
+}
+
+.btn-burgundy-sec:hover {
+  border-color: #800020;
+  background-color: #BF9B73;
+  color: #800020;
+}
+
 .tutup-welcome {
   transform: translateY(0);
   animation: 3s in-out forwards;
+}
+
+.bg1 {
+  background: url("./images/bg1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.bg2 {
+  background: url("./images/bg2.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#social-media-dika {
+  padding-top: 20px;
+}
+
+#social-media-novi {
+  padding-top: 20px;
+}
+
+.fh5co-social-icons {
+  margin: 0;
+  padding: 0;
+}
+.fh5co-social-icons li {
+  margin: 0;
+  padding: 5px;
+  min-height: 100px;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+.fh5co-social-icons li a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+  color: #EDECF1;
+  padding: 5px 10px;
+  background-color: #800020;
+  border-radius: 50px;
+}
+.fh5co-social-icons li a i {
+  font-size: 20px;
+}
+
+#countdown .container-countdown {
+  color: #D1CDDE;
+  width: 106px;
+  background-color: #800020;
+  border-radius: 100px;
+  padding: 30px;
+  box-shadow: 0 6px 12px #800020;
+}
+
+#table-countdown .container-countdown #day, #hour, #minute, #second {
+  color: #EDECF1;
+  font-size: 1.2rem !important;
+  font-weight: 700;
+}
+
+#countdown #table-countdown tbody tr td {
+  background-color: transparent;
+}
+
+#acara-syukuran,
+#acara-akad,
+#acara-resepsi {
+  padding: 10px;
+  margin: 10px;
+}
+
+#acara-syukuran hr,
+#acara-akad hr,
+#acara-resepsi hr {
+  color: #113468;
+}
+
+#table-acara-syukuran tbody tr td,
+#table-acara-akad tbody tr td,
+#table-acara-resepsi tbody tr td {
+  background: transparent;
+}
+
+#table-acara-syukuran tbody tr:first-child td,
+#table-acara-akad tbody tr:first-child td,
+#table-acara-resepsi tbody tr:first-child td {
+  color: #BF9B73;
+}
+
+#gift .container-gift {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid #BF9B73;
+  background-color: #800020;
+}
+
+#gift .container-gift p {
+  color: #EDECF1;
+}
+
+#gift .bunga-gift {
+  position: absolute;
+  top: -60px;
+  left: 0px;
+  right: 0px;
+}
+
+#gift .rekening1 {
+  text-align: left;
+  margin: auto;
+  padding: 15px;
+  width: 320px;
+  border: 2px solid #BF9B73;
+  border-radius: 10px;
+  color: #EDECF1;
+  background-image: linear-gradient(to bottom right, #BF9B73, #322B2F);
+}
+
+#gift .kotak-alamat {
+  text-align: left;
+  margin: auto;
+  padding: 15px;
+  width: 320px;
+  border: 2px solid #BF9B73;
+  border-radius: 10px;
+  color: #EDECF1;
+  background-image: linear-gradient(to bottom right, #322B2F, #BF9B73);
+}
+
+#ucapan .container-ucapan {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid #BF9B73;
+  background-color: #800020;
+}
+
+#ucapan .container-ucapan p {
+  color: #EDECF1;
+}
+
+#table-kumpulan-ucapan #kotak-ucapannya::before {
+  transform: rotate(90deg);
+}
+
+#table-kumpulan-ucapan #kotak-ucapannya {
+  width: 100%;
+  background-color: #EEEFFF;
+  border-radius: 0 15px 15px 15px;
+  background-position: center;
+  text-align: left;
+  padding: 25px 15px;
 }
 
 @keyframes in-out {

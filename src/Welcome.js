@@ -4,7 +4,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { useSearchParams } from 'react-router-dom';
-import bunga1 from './images/bunga1.png';
+import CincinImg from './images/img-cincin.png';
 import './App.css';
 
 function WelcomeModal() {
@@ -34,35 +34,24 @@ function WelcomeModal() {
                 scrollable={false}
                 className={modalClose}
             >
-                <Modal.Body className={"bg-black p-0 m-0"}>
-                    <div id="welcome" style={{opacity: 1}}>
-                        <div className="d-flex justify-content-center align-items-center">
-                            <div className="text-center w-100 p-0 d-flex-column">
-                                <div style={{
-                                    width: 100+"%",
-                                    height: 175,
-                                    background: `url(${bunga1})`,
-                                    backgroundSize: "contain"
-                                }} />
-                                <h1 className="font-esthetic mb-4" data-aos="flip-left" data-aos-delay="750" data-aos-duration="2000" style={{fontSize: 2.7+"rem"}}>The Wedding Of</h1>
-                                
-                                <div className="col-12 img-crop border border-3 border-burgundy mb-4 mx-auto rounded-circle"
-                                    data-aos="flip-right" data-aos-delay="1000" data-aos-duration="2000"
-                                    style={{
-                                        width: 160,
-                                        height: 160,
-                                        boxShadow: "0px 10px 20px 0px rgba(232,232,232,0.5)",
-                                        background: "url('https://www.brides.com/thmb/wb0WW5OfI6IDrX3Rm0oMS3l8Jt4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/wedding-planning-ultimate-guide-recirc-Janet-Lin-Photography-f3d7c8f9fe854f69ada0fc53e6d100bd.jpg')",
-                                        backgroundSize: "cover",
-                                    }}>
+                <Modal.Body id="overlay" className={"p-0 m-0"}>
+                    <div className="content">
+                        <div className="container d-flex-column align-items-center justify-content-center" style={{width: "100%", height: "100%"}}>
+                            <div className="row mt-4 mb-2">
+                                <h1 data-aos="fade-down" data-aos-delay="500" data-aos-duration="2000" className="font-esthetic text-secondary">The Wedding Of</h1>
+                                <div data-aos="flip-left" data-aos-delay="750" data-aos-duration="2000" className="col-md-12 col-md-offset-2 text-center fh5co-heading">
+                                    <img src={CincinImg} alt="" className="couple-main" />
                                 </div>
-
-                                <h1 className="font-esthetic my-4" data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="2000" style={{fontSize: 2.5+"rem"}}>Al &amp; Novi</h1>
-                                <div id="guest-name" data-aos="fade-down" data-aos-delay="1750" data-aos-duration="2000" style={{color: "#E2E2EF"}}>Kepada Yth Bapak/Ibu/Saudara/i</div>
-                                <h3 className='mb-3 mr-auto' data-aos="fade-down" data-aos-delay="1850" data-aos-duration="2000" style={{color: "#E2E2EF"}}>{queryParam.get("to")}</h3>
-                                <div style={{height: 32}}></div>
-                                <div className='mb-4'>
-                                    <Button variant="light" onClick={onClick} className="rounded-pill">
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12 col-md-offset-2 text-center fh5co-heading">
+                                    <h1 data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000" className='font-esthetic text-secondary my-4'>Al & Novi</h1>
+                                    <p data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="2000" style={{color: "#EEE", marginBottom: 0}}>Kepada Bapak/Ibu/Saudara/i</p>
+                                    <h3 data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="2000" style={{color: "#EEE", marginBottom: 0, fontWeight: "bold"}}>{queryParam.get("to")}</h3>
+                                    <p data-aos="zoom-in" data-aos-delay="1750" data-aos-duration="2000" style={{color: "#EEE", fontSize: 12, marginTop: 10}}>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
+                                    <div style={{height: 20}}></div>
+                                    {/* <button className="btn btn-primary" onClick={onClick}>Buka Undangan</button> */}
+                                    <Button data-aos="fade-up" data-aos-delay="2000" data-aos-duration="2000" onClick={onClick} className="rounded-pill btn-burgundy">
                                         <FontAwesomeIcon icon={faEnvelope} />&nbsp;Buka Undangan
                                     </Button>
                                 </div>
