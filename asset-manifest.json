@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wedding-invitation/al-novi/static/css/main.a13f0b93.css",
-    "main.js": "/wedding-invitation/al-novi/static/js/main.3adbab4b.js",
+    "main.js": "/wedding-invitation/al-novi/static/js/main.ea8f105f.js",
     "static/js/453.66636984.chunk.js": "/wedding-invitation/al-novi/static/js/453.66636984.chunk.js",
     "static/media/img-cincin.png": "/wedding-invitation/al-novi/static/media/img-cincin.44d0ef11cda4c3c049d9.png",
     "static/media/cincin1.png": "/wedding-invitation/al-novi/static/media/cincin1.3c269f943dbc1e1a6c49.png",
@@ -19,11 +19,11 @@
     "index.html": "/wedding-invitation/al-novi/index.html",
     "static/media/instagram.svg": "/wedding-invitation/al-novi/static/media/instagram.da7c8b906a74d96374903698f965002d.svg",
     "main.a13f0b93.css.map": "/wedding-invitation/al-novi/static/css/main.a13f0b93.css.map",
-    "main.3adbab4b.js.map": "/wedding-invitation/al-novi/static/js/main.3adbab4b.js.map",
+    "main.ea8f105f.js.map": "/wedding-invitation/al-novi/static/js/main.ea8f105f.js.map",
     "453.66636984.chunk.js.map": "/wedding-invitation/al-novi/static/js/453.66636984.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a13f0b93.css",
-    "static/js/main.3adbab4b.js"
+    "static/js/main.ea8f105f.js"
   ]
 }
