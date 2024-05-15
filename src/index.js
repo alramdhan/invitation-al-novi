@@ -7,7 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/wedding-invitation/al-novi",
+    path: "/wedding-invitation/al-novi/",
     element: <App />
   }
 ]);
