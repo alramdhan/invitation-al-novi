@@ -35,7 +35,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import moment, { updateLocale } from 'moment/moment.js';
 
-const baseUrl = "http://invitation-alnovi.000webhostapp.com/api";
+const baseUrl = "https://invitation-alnovi.000webhostapp.com/api";
 
 function App() {
   const [ucapan, setUcapan] = useState(null);
