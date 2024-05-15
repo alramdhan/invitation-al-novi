@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/wedding-invitation/al-novi/static/css/main.a13f0b93.css",
-    "main.js": "/wedding-invitation/al-novi/static/js/main.dc2bdc44.js",
-    "static/js/453.66636984.chunk.js": "/wedding-invitation/al-novi/static/js/453.66636984.chunk.js",
-    "static/media/img-cincin.png": "/wedding-invitation/al-novi/static/media/img-cincin.44d0ef11cda4c3c049d9.png",
-    "static/media/cincin1.png": "/wedding-invitation/al-novi/static/media/cincin1.3c269f943dbc1e1a6c49.png",
-    "static/media/You-Are-The-One.mp3": "/wedding-invitation/al-novi/static/media/You-Are-The-One.4b17bced152b8e97610f.mp3",
-    "static/media/bg-mempelai1.png": "/wedding-invitation/al-novi/static/media/bg-mempelai1.1a7a987edcbf80e95c84.png",
-    "static/media/bg-mempelai2.png": "/wedding-invitation/al-novi/static/media/bg-mempelai2.b1e9cf5d112bedc7724f.png",
-    "static/media/mempelai-wanita.png": "/wedding-invitation/al-novi/static/media/mempelai-wanita.f94e28d1997682f45869.png",
-    "static/media/mempelai-pria.png": "/wedding-invitation/al-novi/static/media/mempelai-pria.16c5a4c3a3cb4640b3fd.png",
-    "static/media/divider.png": "/wedding-invitation/al-novi/static/media/divider.a15aee5cc6f83de405ec.png",
-    "static/media/bg1.jpg": "/wedding-invitation/al-novi/static/media/bg1.44944320f0fd3edc9e61.jpg",
-    "static/media/bg-welcome.jfif": "/wedding-invitation/al-novi/static/media/bg-welcome.625668eac9b8bd44e775.jfif",
-    "static/media/bismillah.png": "/wedding-invitation/al-novi/static/media/bismillah.0409112926964bb8fc1c.png",
-    "static/media/layer-ayat.png": "/wedding-invitation/al-novi/static/media/layer-ayat.0395da094b9d0c34cabc.png",
-    "static/media/bg2.jpg": "/wedding-invitation/al-novi/static/media/bg2.f384f16fc728468a7a95.jpg",
-    "index.html": "/wedding-invitation/al-novi/index.html",
-    "static/media/instagram.svg": "/wedding-invitation/al-novi/static/media/instagram.da7c8b906a74d96374903698f965002d.svg",
-    "main.a13f0b93.css.map": "/wedding-invitation/al-novi/static/css/main.a13f0b93.css.map",
-    "main.dc2bdc44.js.map": "/wedding-invitation/al-novi/static/js/main.dc2bdc44.js.map",
-    "453.66636984.chunk.js.map": "/wedding-invitation/al-novi/static/js/453.66636984.chunk.js.map"
+    "main.css": "/invitation-al-novi/static/css/main.5267e81e.css",
+    "main.js": "/invitation-al-novi/static/js/main.2e9cc7e8.js",
+    "static/js/453.66636984.chunk.js": "/invitation-al-novi/static/js/453.66636984.chunk.js",
+    "static/media/img-cincin.png": "/invitation-al-novi/static/media/img-cincin.44d0ef11cda4c3c049d9.png",
+    "static/media/cincin1.png": "/invitation-al-novi/static/media/cincin1.3c269f943dbc1e1a6c49.png",
+    "static/media/You-Are-The-One.mp3": "/invitation-al-novi/static/media/You-Are-The-One.4b17bced152b8e97610f.mp3",
+    "static/media/bg-mempelai1.png": "/invitation-al-novi/static/media/bg-mempelai1.1a7a987edcbf80e95c84.png",
+    "static/media/bg-mempelai2.png": "/invitation-al-novi/static/media/bg-mempelai2.b1e9cf5d112bedc7724f.png",
+    "static/media/mempelai-wanita.png": "/invitation-al-novi/static/media/mempelai-wanita.f94e28d1997682f45869.png",
+    "static/media/mempelai-pria.png": "/invitation-al-novi/static/media/mempelai-pria.16c5a4c3a3cb4640b3fd.png",
+    "static/media/divider.png": "/invitation-al-novi/static/media/divider.a15aee5cc6f83de405ec.png",
+    "static/media/bg1.jpg": "/invitation-al-novi/static/media/bg1.44944320f0fd3edc9e61.jpg",
+    "static/media/bg-welcome.jfif": "/invitation-al-novi/static/media/bg-welcome.625668eac9b8bd44e775.jfif",
+    "static/media/bismillah.png": "/invitation-al-novi/static/media/bismillah.0409112926964bb8fc1c.png",
+    "static/media/layer-ayat.png": "/invitation-al-novi/static/media/layer-ayat.0395da094b9d0c34cabc.png",
+    "static/media/bg2.jpg": "/invitation-al-novi/static/media/bg2.f384f16fc728468a7a95.jpg",
+    "index.html": "/invitation-al-novi/index.html",
+    "static/media/instagram.svg": "/invitation-al-novi/static/media/instagram.da7c8b906a74d96374903698f965002d.svg",
+    "main.5267e81e.css.map": "/invitation-al-novi/static/css/main.5267e81e.css.map",
+    "main.2e9cc7e8.js.map": "/invitation-al-novi/static/js/main.2e9cc7e8.js.map",
+    "453.66636984.chunk.js.map": "/invitation-al-novi/static/js/453.66636984.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a13f0b93.css",
-    "static/js/main.dc2bdc44.js"
+    "static/css/main.5267e81e.css",
+    "static/js/main.2e9cc7e8.js"
   ]
 }
