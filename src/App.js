@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCalendar,
   faHome,
-  faComment,
+  faComments,
   faClock,
   faMap,
   faCopy,
@@ -203,7 +203,7 @@ function App() {
             <li className="nav-item">
                 <a className="nav-link" href="#ucapan">
                     {/* <i className="fa-solid fa-comments"></i> */}
-                    <FontAwesomeIcon icon={faComment} color='#EEE' />
+                    <FontAwesomeIcon icon={faComments} color='#EEE' />
                     <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Ucapan</span>
                 </a>
             </li>
