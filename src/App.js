@@ -170,42 +170,42 @@ function App() {
     <div className='App'>
       <audio id="play-song" src={song} preload='true' loop />
       <Fireworks decorateOptions={decorateOptions} autorun={{speed: 3, duration: 10000, delay: 4500}} />
-      <main className='container-main' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
-        <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
-          <ul className="navbar-nav nav-justified w-100 align-items-center">
-            <li className="nav-item">
-              <a className="nav-link" href="#home">
-                <FontAwesomeIcon icon={faHome} color='#EEE' />
-                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Home</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#mempelai">
-                <img width={25} src={mempelai} alt="mempelai" />
-                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Mempelai</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#countdown">
-                <img width={25} src={countdown} alt="countdown" />
-                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Tanggal</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#gift">
-                <FontAwesomeIcon icon={faGift} color="#EEE" />
-                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Gift</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#ucapan">
-                <FontAwesomeIcon icon={faComments} color='#EEE' />
-                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Ucapan</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
+        <ul className="navbar-nav nav-justified w-100 align-items-center">
+          <li className="nav-item">
+            <a className="nav-link" href="#home">
+              <FontAwesomeIcon icon={faHome} color='#EEE' />
+              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Home</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#mempelai">
+              <img width={25} src={mempelai} alt="mempelai" />
+              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Mempelai</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#countdown">
+              <img width={25} src={countdown} alt="countdown" />
+              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Tanggal</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#gift">
+              <FontAwesomeIcon icon={faGift} color="#EEE" />
+              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Gift</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#ucapan">
+              <FontAwesomeIcon icon={faComments} color='#EEE' />
+              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Ucapan</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
       
+      <main className='container-main' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
         <section className='bg1' id='home'>
           <div className="w-100 text-center pt-4">
             <h1 className="font-esthetic title-pengantin judul1" style={{fontSize: "3.5rem", fontWeight: 700, marginTop: 200}}>The Wedding Of</h1>

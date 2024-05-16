@@ -154,21 +154,24 @@ body::-webkit-scrollbar-thumb {
   padding-top: 40px;
 }
 
-@media screen and (min-height: 800px) {
+@media screen and (max-height: 932px) {
+  #overlay .content .container {
+    padding-top: 100px !important;
+  }
   .mouse-scroll-home {
-    padding-top: 175px !important;
+    padding-top: 170px !important;
   }
   .judul1 {
     margin-top: 100px !important;
   }
 }
 
-@media screen and (min-height: 900px) {
+@media screen and (max-height: 845px) {
   #overlay .content .container {
     padding-top: 100px !important;
   }
-  .scroll-down {
-    padding-bottom: 150px !important;
+  .mouse-scroll-home {
+    padding-top: 80px !important;
   }
 }
 
@@ -183,8 +186,8 @@ body::-webkit-scrollbar-thumb {
   }
 
   .foto-home .couple-foto {
-    width: 220px;
-    height: 220px;
+    width: 240px !important;
+    height: 240px !important;
   }
 
   .layer-sangmempelai {
@@ -312,6 +315,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 375px) {
+  .foto-home .couple-foto {
+    width: 155px !important;
+    height: 155px !important;
+  }
   .mouse-scroll-home {
     padding-top: 10px !important;
   }
@@ -319,6 +326,10 @@ body::-webkit-scrollbar-thumb {
     width: 76px !important;
     padding: 13px 18px !important;
   }
+}
+
+.judul1 {
+  margin-top: 200px;
 }
 
 .layer-sangmempelai {
