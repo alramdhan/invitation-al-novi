@@ -174,38 +174,34 @@ function App() {
         <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
           <ul className="navbar-nav nav-justified w-100 align-items-center">
             <li className="nav-item">
-                <a className="nav-link" href="#home">
-                    {/* <i className="fa-solid fa-house"></i> */}
-                    <FontAwesomeIcon icon={faHome} color='#EEE' />
-                    <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Home</span>
-                </a>
+              <a className="nav-link" href="#home">
+                <FontAwesomeIcon icon={faHome} color='#EEE' />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Home</span>
+              </a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#mempelai">
-                    {/* <i className="fa-solid fa-user-group"></i> */}
-                    {/* <FontAwesomeIcon icon={faUserGroup} color='#EEE' /> */}
-                    <img width={25} src={mempelai} alt="mempelai" />
-                    <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Mempelai</span>
-                </a>
+              <a className="nav-link" href="#mempelai">
+                <img width={25} src={mempelai} alt="mempelai" />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Mempelai</span>
+              </a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#countdown">
-                    <img width={25} src={countdown} alt="countdown" />
-                    <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Tanggal</span>
-                </a>
+              <a className="nav-link" href="#countdown">
+                <img width={25} src={countdown} alt="countdown" />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Tanggal</span>
+              </a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#gift">
-                    <FontAwesomeIcon icon={faGift} color="#EEE" />
-                    <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Gift</span>
-                </a>
+              <a className="nav-link" href="#gift">
+                <FontAwesomeIcon icon={faGift} color="#EEE" />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Gift</span>
+              </a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#ucapan">
-                    {/* <i className="fa-solid fa-comments"></i> */}
-                    <FontAwesomeIcon icon={faComments} color='#EEE' />
-                    <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Ucapan</span>
-                </a>
+              <a className="nav-link" href="#ucapan">
+                <FontAwesomeIcon icon={faComments} color='#EEE' />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Ucapan</span>
+              </a>
             </li>
           </ul>
         </nav>
