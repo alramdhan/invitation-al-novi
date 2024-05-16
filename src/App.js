@@ -602,16 +602,16 @@ function App() {
               <div id="container-kumpulan-ucapan" className='mt-4'>
                 <table id='table-kumpulan-ucapan' className='w-100'>
                   <tbody>
-                    {ucapan != null ? ucapan["data"].map((u) => {
+                    {ucapan != null ? ucapan.data.map((u) => {
                       const badge = u.absen === 1 ? <Badge bg='success'>Hadir</Badge> : <Badge bg='danger'>Tidak Hadir</Badge>;
-                      
+                      console.log("da", u.created_at.replace(new RegExp("[0-9]{3}Z$"), ""));
                       return (
                         <tr key={u.id}>
                           <td colSpan={2}>
                             <div className='kotak-ucapannya mb-2'>
                               <div className='d-flex justify-content-between'>
                                 <h5>{u.nama_tamu}&nbsp;&nbsp;&nbsp;{badge}</h5>
-                                <span>{timeSince(new Date(u.created_at))}</span>
+                                <span>{timeSince(new Date(u.created_at.replace(new RegExp("[0-9]{3}Z$"), "")))}</span>
                               </div>
                               <hr className='mb-2 m-0 p-0' />
                               <span>{u.ucapan}</span>
