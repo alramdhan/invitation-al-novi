@@ -33,7 +33,6 @@ import song from './audio/You-Are-The-One.mp3';
 import { Badge, Button, Card, Form, Toast, ToastContainer } from 'react-bootstrap';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import moment, { updateLocale } from 'moment/moment.js';
 
 const baseUrl = "https://invitation-alnovi.000webhostapp.com/api";
 
@@ -56,7 +55,7 @@ function App() {
     const formData = new FormData();
     const nama = document.getElementById("txt-nama");
     const ucapan = document.getElementById("txt-ucapan");
-    if(nama.value == '' || ucapan.value == '' || selectedAbsen == -1) {
+    if(nama.value === '' || ucapan.value === '' || selectedAbsen === -1) {
       Swal.fire({
         title: "Peringatan",
         text: "Form ucapan tidak boleh kosong",
@@ -72,7 +71,7 @@ function App() {
           "Content-Type": "application/json"
         }
       }).then((response) => {
-        if(response.data["response_code"] == 201) {
+        if(response.data["response_code"] === 201) {
           Swal.fire({
             title: "Terkirim",
             text: "Terima kasih untuk ucapan dan do'a nya ^^",
@@ -122,27 +121,49 @@ function App() {
   }
 
   function timeSince(date) {
-    const a = moment([date.getFullYear(), date.getMonth(), date.getDate()]).fromNow(
-      updateLocale("en", {
-        relativeTime: {
-          future: "in %s",
-          past: "%s ",
-          s: "Just now",
-          m: "%d minute ago",
-          mm: "%d minute ago",
-          h: "%d hour ago",
-          hh: "%d hour ago",
-          d: "%d day ago",
-          dd: "%d day ago",
-          M: "a month ago",
-          MM: "%d month ago",
-          y: "year ago",
-          yy: "%d year ago"
-        }
-      })
-    );
+    var seconds = Math.floor((new Date() - date) / 1000);
 
-    return a;
+    const interval = Math.floor(seconds / 31536000);
+    if(interval > 1) {
+      return interval + " years ago";
+    }
+    if(interval === 1) {
+      return interval + " year ago";
+    }
+
+    const month = Math.floor(seconds / 2628000);
+    if(month > 1) {
+      return month + " months ago";
+    }
+    if(month === 1) {
+      return month + " month ago";
+    }
+
+    const day = Math.floor(seconds / 86400);
+    if(day > 1) {
+      return day + " days ago";
+    }
+    if(day === 1) {
+      return day + " day ago";
+    }
+
+    const hour = Math.floor(seconds / 3600);
+    if(hour > 1) {
+      return hour + " hours ago";
+    }
+    if(hour === 1) {
+      return hour + " hour ago";
+    }
+
+    const minute = Math.floor(seconds / 60);
+    if(minute > 1) {
+      return minute + " minutes ago";
+    }
+    if(minute === 1) {
+      return minute + " minute ago";
+    }
+
+    return "just now";
   }
 
   return (
@@ -582,7 +603,7 @@ function App() {
                 <table id='table-kumpulan-ucapan' className='w-100'>
                   <tbody>
                     {ucapan != null ? ucapan["data"].map((u) => {
-                      const badge = u.absen == 1 ? <Badge bg='success'>Hadir</Badge> : <Badge bg='danger'>Tidak Hadir</Badge>;
+                      const badge = u.absen === 1 ? <Badge bg='success'>Hadir</Badge> : <Badge bg='danger'>Tidak Hadir</Badge>;
                       
                       return (
                         <tr key={u.id}>
