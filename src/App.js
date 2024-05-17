@@ -29,6 +29,7 @@ import Bunga1 from './images/bg-mempelai1.png';
 import Bunga2 from './images/bg-mempelai2.png';
 import MempelaiPria from './images/mempelai-pria.png';
 import MempelaiWanita from './images/mempelai-wanita.png';
+import AdabWalimah from './images/adab-walimah.png';
 import song from './audio/You-Are-The-One.mp3';
 import { Badge, Button, Card, Form, Toast, ToastContainer } from 'react-bootstrap';
 import axios from 'axios';
@@ -232,10 +233,10 @@ function App() {
           </div>
         </section>
         <section className='bg2' id="mempelai">
-          <div className='w-100 text-center pt-1' style={{marginBottom: 40}}>
-            <img data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" src={Bismillah} alt="bismillah" />
+          <div className='w-100 text-center pt-4' style={{marginBottom: 40}}>
+            <img data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" width="70%" src={Bismillah} alt="bismillah"  />
 
-            <h3 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" className="font-esthetic" style={{fontSize: "2rem"}}>Assalamu&apos;alaikum Wr. Wb.</h3>
+            <h3 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" className="font-esthetic" style={{fontSize: "2rem", marginTop: 25}}>Assalamu&apos;alaikum Wr. Wb.</h3>
             <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" style={{padding: 15}}>
               Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta Kerabat sekalian untuk menghadiri acara Pernikahan kami:
             </p>
@@ -495,8 +496,21 @@ function App() {
                 </tbody>
               </table>
             </Card>
+            <div className='my-4'>
+              <div style={{paddingLeft: 30, paddingRight: 30}}>
+                <h1 className='text-secondary'>ADAB WALIMAH</h1>
+                <p className='text-secondary'>Tanpa mengurangi rasa hormat, ada hal-hal dalam adab seorang muslim ketika menghadiri walimah yang harus diperhatikan</p>
+              </div>
+              <div id='adab-walimah'>
+                <img className='img-daftar-adab-walimah' src={AdabWalimah} alt="adab-walimah" />
+              </div>
+            </div>
+          </div>
+          <div>
+
           </div>
         </section>
+
         <section className='bg2' id='gift'>
           <div data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000" className='text-center' style={{marginTop: 50, marginBottom: 40}}>
             <div className="position-relative">

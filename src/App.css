@@ -6,6 +6,7 @@ body {
 
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -177,7 +178,7 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-height: 712px) {
   #overlay .content .container {
-    padding-top: 40px !important;
+    padding-top: 10px !important;
   }
 }
 
@@ -216,6 +217,14 @@ body::-webkit-scrollbar-thumb {
 
   .mouse-scroll-home {
     padding-top: 60px;
+  }
+
+  #adab-walimah {
+    height: 600px !important;
+  }
+
+  #adab-walimah .img-daftar-adab-walimah {
+    width: 100% !important;
   }
 }
 
@@ -521,31 +530,59 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
-#acara-syukuran,
 #acara-akad,
-#acara-resepsi {
-  padding: 10px;
-  margin: 40px;
-  border-radius: 30px;
+#acara-resepsi,
+#acara-syukuran {
+  padding: 30px 15px;
+  margin: 20px 40px 10px 40px;
+  border-radius: 15px;
   z-index: 1 !important;
 }
 
-#acara-syukuran hr,
 #acara-akad hr,
-#acara-resepsi hr {
+#acara-resepsi hr,
+#acara-syukuran hr {
   color: #113468;
 }
 
-#table-acara-syukuran tbody tr td,
 #table-acara-akad tbody tr td,
-#table-acara-resepsi tbody tr td {
+#table-acara-resepsi tbody tr td,
+#table-acara-syukuran tbody tr td {
   background: transparent;
 }
 
-#table-acara-syukuran tbody tr:first-child td,
 #table-acara-akad tbody tr:first-child td,
-#table-acara-resepsi tbody tr:first-child td {
+#table-acara-resepsi tbody tr:first-child td,
+#table-acara-syukuran tbody tr:first-child td {
   color: #BF9B73;
+}
+
+#acara-akad {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+#acara-syukuran {
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+#adab-walimah {
+  padding: 30px;
+  width: 80%;
+  height: 780px;
+  margin: auto;
+  background-image: url('./images/bg3.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#adab-walimah .img-daftar-adab-walimah {
+  width: 72%;
+  border-radius: 30px !important;
 }
 
 #gift .container-gift {
