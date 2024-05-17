@@ -175,6 +175,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@media screen and (max-height: 712px) {
+  #overlay .content .container {
+    padding-top: 40px !important;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .container-main {
     width: 100% !important;
@@ -215,7 +221,8 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 380px) {
   #gift .rekening1,
-  #gift .rekening2 {
+  #gift .rekening2,
+  #gift .rekening3 {
     width: 300px !important;
   }
   #gift .kotak-alamat {
@@ -225,7 +232,8 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 770px) {
   #gift .rekening1,
-  #gift .rekening2 {
+  #gift .rekening2,
+  #gift .rekening3 {
     width: 302px !important;
   }
   #gift .kotak-alamat {
@@ -235,7 +243,8 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 395px) {
   #gift .rekening1,
-  #gift .rekening2 {
+  #gift .rekening2,
+  #gift .rekening3 {
     width: 295px !important;
   }
   #gift .kotak-alamat {
@@ -248,7 +257,8 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 365px) {
   #gift .rekening1,
-  #gift .rekening2 {
+  #gift .rekening2,
+  #gift .rekening3 {
     width: 280px !important;
   }
   #gift .kotak-alamat {
@@ -561,7 +571,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #gift .rekening1,
-#gift .rekening2 {
+#gift .rekening2,
+#gift .rekening3 {
   text-align: left;
   margin: auto;
   padding: 15px;

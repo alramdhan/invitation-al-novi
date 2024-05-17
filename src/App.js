@@ -537,6 +537,14 @@ function App() {
                 </Button><br />
                 Yul Haidir
               </div>
+              <div className='rekening3 mt-4'>
+                BCA<br />
+                7360721269
+                <Button className='btn btn-outline bg-transparent border-0' onClick={() => copyToClipboard("7360721269")}>
+                  <FontAwesomeIcon icon={faCopy} />
+                </Button><br />
+                Dika Alfarell Haidir
+              </div>
               <div className='kotak-alamat mt-4 mb-0 pb-0'>
                 <table>
                   <tbody>
