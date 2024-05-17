@@ -169,7 +169,6 @@ function App() {
   return (
     <div className='App'>
       <audio id="play-song" src={song} preload='true' loop />
-      <Fireworks decorateOptions={decorateOptions} autorun={{speed: 3, duration: 10000, delay: 4500}} />
       <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
         <ul className="navbar-nav nav-justified w-100 align-items-center">
           <li className="nav-item">
@@ -206,6 +205,7 @@ function App() {
       </nav>
       
       <main className='container-main' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
+        <Fireworks decorateOptions={decorateOptions} autorun={{speed: 3, duration: 10000, delay: 4500}} />
         <section className='bg1' id='home'>
           <div className="w-100 text-center pt-4">
             <h1 className="font-esthetic title-pengantin judul1" style={{fontSize: "3.5rem", fontWeight: 700, marginTop: 200}}>The Wedding Of</h1>
