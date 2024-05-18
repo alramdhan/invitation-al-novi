@@ -650,7 +650,7 @@ function App() {
               </div>
             </div>
           </div>
-          <p style={{paddingLeft: 20, paddingRight: 20}}>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.</p>
+          <p style={{marginTop: 30, paddingLeft: 20, paddingRight: 20}}>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.</p>
           <p>See you on our big day!</p>
           <h1 className='font-esthetic'>Novi &amp; Dika</h1>
           <h1 className='font-esthetic' style={{fontSize: "2rem"}}>Wassalamu&apos;alaikum Warahmatullahi Wabarakatuh</h1>
