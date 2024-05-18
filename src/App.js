@@ -249,12 +249,12 @@ function App() {
             </div>
             <div className="layer-sangmempelai">
               <div>
-                <img data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000" width={200} height={200} src={MempelaiPria} alt="mempelai Pria" />
-                <p data-aos="flip-right" data-aos-delay="500" data-aos-duration="1000">Dika Alfarell Haidir Ramdani</p>
-                <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
+                <img data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000" width={200} height={200} src={MempelaiPria} alt="mempelai Pria" />
+                <p data-aos="flip-right" data-aos-delay="500" data-aos-duration="2000">Dika Alfarell Haidir Ramdani</p>
+                <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
                   Putra pertama dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 2, fontWeight: 700, fontSize: "2rem"}}>Bapak Yul Haidir &amp; Ibu Suparti</font>
                 </span>
-                <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000"  id="social-media-dika">
+                <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000"  id="social-media-dika">
                   <ul className="fh5co-social-icons">
                     <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/al.haidirr"><img width={15} src={IG} alt="instagram" /></a></li>
                   </ul>
@@ -266,7 +266,7 @@ function App() {
                     </svg>
                   </div>
                 </div>
-                <div data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000" style={{paddingLeft: 25, paddingRight: 25}}>
+                <div data-aos="flip-up" data-aos-delay="1000" data-aos-duration="2000" style={{paddingLeft: 25, paddingRight: 25}}>
                   <table>
                     <tbody>
                       <tr>
@@ -281,7 +281,7 @@ function App() {
                     </tbody>
                   </table>
                 </div>
-                <img data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" width={200} height={200} src={MempelaiWanita} alt="mempelai Pria" />
+                <img data-aos="fade-right" data-aos-delay="500" data-aos-duration="2000" width={200} height={200} src={MempelaiWanita} alt="mempelai Pria" />
                 <div className="position-relative">
                   <div className="position-absolute" style={{top: "-10px", left: "10%"}}>
                     <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
@@ -289,11 +289,11 @@ function App() {
                     </svg>
                   </div>
                 </div>
-                <p data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000">Siti Novi Nurkomala</p>
-                <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
+                <p data-aos="flip-left" data-aos-delay="500" data-aos-duration="2000">Siti Novi Nurkomala</p>
+                <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
                   Putri kedua dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 2, fontWeight: 700, fontSize: "2rem"}}>Bapak Taufik Hidayat &amp; Ibu Yoyoh</font>
                 </span>
-                <div  data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000"  id="social-media-novi">
+                <div  data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000"  id="social-media-novi">
                   <ul className="fh5co-social-icons">
                     <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/novinurkom"><img width={15} src={IG} alt="instagram" /></a></li>
                   </ul>
@@ -331,10 +331,10 @@ function App() {
         <section className="bg2" id="countdown">
           <div className='text-center'>
             <h1 className='font-esthetic'>Our Wedding</h1>
-            <h1 data-aos="zoom-in" data-aos-duration="1000">Waktu Menuju Acara</h1>
-            <h5 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" className='text-secondary'>23/06/2024</h5>
-            <div  data-aos="zoom-in" data-aos-delay="750" data-aos-duration="1000" style={{
-              border: "1px solid #800020",
+            <h1 data-aos="zoom-in" data-aos-duration="1500">Waktu Menuju Acara</h1>
+            <h5 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1500" className='text-secondary'>23/06/2024</h5>
+            <div  data-aos="zoom-in" data-aos-delay="750" data-aos-duration="1500" style={{
+              border: "2px solid #BF9B73",
               borderRadius: "75px",
               padding: "10px 0",
               margin: 0,
@@ -366,7 +366,7 @@ function App() {
                 </tbody>
               </table>
             </div>
-            <p data-aos="fade-down"  data-aos-delay="1000" data-aos-duration="1000" className="my-4" style={{paddingLeft: 16, paddingRight: 16}}>
+            <p data-aos="fade-down"  data-aos-delay="1000" data-aos-duration="1500" className="my-4" style={{paddingLeft: 16, paddingRight: 16}}>
               Dengan memohon rahmat dan ridho Allah Subhanallahu Wa Ta&apos;ala, Insha Allah kami akan menyelenggarakan
               acara :
             </p>
@@ -377,7 +377,42 @@ function App() {
                 </svg>
               </div>
             </div>
-            <Card data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1000" id='acara-akad'>
+            <Card data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" id='acara-syukuran'>
+              <h1 className='font-esthetic'>Syukuran</h1>
+              <hr />
+              <table className='table table-borderless m-0 p-0 w-100' id='table-acara-syukuran'>
+                <tbody>
+                  <tr className='row'>
+                    <td align='center' valign='middle' className='col-6'>
+                      <FontAwesomeIcon icon={faClock} /><br />
+                      09:00<br />
+                      Selesai
+                    </td>
+                    <td align='center' valign='middle' className='col-6'>
+                      <FontAwesomeIcon icon={faCalendar} /><br />
+                      Jum&apos;at<br />
+                      21 Juni 2024
+                    </td>
+                  </tr>
+                  <tr className='row'>
+                    <td colSpan={2} className='col-12'>
+                      <h4>Kediaman Mempelai Pria</h4>
+                    </td>
+                  </tr>
+                  <tr className='row'>
+                    <td colSpan={2} className='col-12 text-burgundy pt-0 px-4'>
+                      Alamat : Kampung Girang, gg. inpress RT 003/008, Kel. Harjasari, Kec. Bogor Selatan, Kota Bogor 16138
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a target='__blank' rel='noreferrer' href="https://maps.app.goo.gl/KyBdmj81xLzKwmHd7"><Button className='rounded-pill btn-burgundy'>Lihat Lokasi&nbsp;<FontAwesomeIcon icon={faMap} /></Button></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </Card>
+            <Card data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1500" id='acara-akad'>
               <h1 className='font-esthetic'>Akad</h1>
               <hr />
               <table className='table table-borderless m-0 p-0 w-100' id='table-acara-akad'>
@@ -419,7 +454,7 @@ function App() {
                 </svg>
               </div>
             </div>
-            <Card data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" id='acara-resepsi'>
+            <Card data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1500" id='acara-resepsi'>
               <h1 className='font-esthetic'>Resepsi</h1>
               <hr />
               <table className='table table-borderless m-0 p-0 w-100' id='table-acara-resepsi'>
@@ -461,47 +496,12 @@ function App() {
                 </svg>
               </div>
             </div>
-            <Card data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" id='acara-syukuran'>
-              <h1 className='font-esthetic'>Syukuran</h1>
-              <hr />
-              <table className='table table-borderless m-0 p-0 w-100' id='table-acara-syukuran'>
-                <tbody>
-                  <tr className='row'>
-                    <td align='center' valign='middle' className='col-6'>
-                      <FontAwesomeIcon icon={faClock} /><br />
-                      09:00<br />
-                      Selesai
-                    </td>
-                    <td align='center' valign='middle' className='col-6'>
-                      <FontAwesomeIcon icon={faCalendar} /><br />
-                      Jum&apos;at<br />
-                      21 Juni 2024
-                    </td>
-                  </tr>
-                  <tr className='row'>
-                    <td colSpan={2} className='col-12'>
-                      <h4>Kediaman Mempelai Pria</h4>
-                    </td>
-                  </tr>
-                  <tr className='row'>
-                    <td colSpan={2} className='col-12 text-burgundy pt-0 px-4'>
-                      Alamat : Kampung Girang, gg. inpress RT 003/008, Kel. Harjasari, Kec. Bogor Selatan, Kota Bogor 16138
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a target='__blank' rel='noreferrer' href="https://maps.app.goo.gl/KyBdmj81xLzKwmHd7"><Button className='rounded-pill btn-burgundy'>Lihat Lokasi&nbsp;<FontAwesomeIcon icon={faMap} /></Button></a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </Card>
             <div className='my-4'>
               <div style={{paddingLeft: 30, paddingRight: 30}}>
-                <h1 className='text-secondary'>ADAB WALIMAH</h1>
-                <p className='text-secondary'>Tanpa mengurangi rasa hormat, ada hal-hal dalam adab seorang muslim ketika menghadiri walimah yang harus diperhatikan</p>
+                <h1 data-aos="fade-up" data-aos-duration="1000" className='text-secondary'>ADAB WALIMAH</h1>
+                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" className='text-secondary'>Tanpa mengurangi rasa hormat, ada hal-hal dalam adab seorang muslim ketika menghadiri walimah yang harus diperhatikan</p>
               </div>
-              <div id='adab-walimah'>
+              <div data-aos="flip-right" data-aos-delay="400" data-aos-duration="2000" id='adab-walimah'>
                 <img className='img-daftar-adab-walimah' src={AdabWalimah} alt="adab-walimah" />
               </div>
             </div>
@@ -512,7 +512,7 @@ function App() {
         </section>
 
         <section className='bg2' id='gift'>
-          <div data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000" className='text-center' style={{marginTop: 50, marginBottom: 40}}>
+          <div data-aos="flip-left" data-aos-delay="500" data-aos-duration="2000" className='text-center' style={{marginTop: 50, marginBottom: 40}}>
             <div className="position-relative">
               <div className="bunga-gift">
                 <img style={{width: "100%"}} src={Bunga1} alt="bunga1" />
@@ -594,9 +594,12 @@ function App() {
             </div>
           </div>
         </section>
+
         <section className="bg2" id="ucapan" style={{paddingBottom: 180}}>
-          <div data-aos="flip-right" data-aos-delay="500" data-aos-duration="1000" className='text-center'>
+          <div data-aos="flip-right" data-aos-delay="500" data-aos-duration="2000" className='text-center'>
             <div className='container-ucapan'>
+              <p>{ ucapan != null ? ucapan.data.length + " Comment" : "0 Comment"}</p>
+              <hr style={{color: "#EDECF1"}} />
               <h1 className='font-esthetic text-secondary'>Ucapan & do&apos;a</h1>
               <p>Kirimkan Do&apos;a & Ucapan Untuk Kedua Mempelai</p>
               <div className='row'>
@@ -604,7 +607,7 @@ function App() {
                   <Form.Control name='nama_tamu' placeholder='Nama' color='#BF9B73' id='txt-nama' className='text-form' required />
                 </div>
                 <div className='col-12 mt-4'>
-                  <Form.Control name='ucapan' as="textarea" id="txt-ucapan" placeholder='Berikan Ucapan dan Do&apos;a Restu' required />
+                  <Form.Control name='ucapan' as="textarea" rows={3} id="txt-ucapan" placeholder='Berikan Ucapan dan Do&apos;a Restu' required />
                 </div>
                 <div className='col-12 mt-4'>
                   <Form.Select name='absen' id='txt-absen' onChange={absenChangeHandler} required>
@@ -621,15 +624,15 @@ function App() {
                 <table id='table-kumpulan-ucapan' className='w-100'>
                   <tbody>
                     {ucapan != null ? ucapan.data.map((u) => {
-                      const badge = u.absen === 1 ? <Badge bg='success'>Hadir</Badge> : <Badge bg='danger'>Tidak Hadir</Badge>;
+                      const badge = u.absen === 1 ? <Badge bg='success' className='pb-0' style={{fontSize: ".75rem"}}>Hadir</Badge> : <Badge bg='danger' className='pb-0' style={{fontSize: ".75rem"}}>Tidak Hadir</Badge>;
                       console.log("da", u.tanggal);
                       return (
                         <tr key={u.id}>
                           <td colSpan={2}>
                             <div className='kotak-ucapannya mb-2'>
-                              <div className='d-flex justify-content-between'>
+                              <div className='d-flex justify-content-between align-items-center'>
                                 <h5>{u.nama_tamu}&nbsp;&nbsp;&nbsp;{badge}</h5>
-                                <span>{timeSince(new Date(u.tanggal))}</span>
+                                <span style={{fontSize: ".8rem"}}>{timeSince(new Date(u.tanggal))}</span>
                               </div>
                               <hr className='mb-2 m-0 p-0' />
                               <span>{u.ucapan}</span>
@@ -639,7 +642,7 @@ function App() {
                       );
                     }) :
                       <tr>
-                        <td colSpan={2}></td>
+                        <td colSpan={2}>&nbsp;</td>
                       </tr>
                     }
                   </tbody>

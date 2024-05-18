@@ -517,7 +517,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #800020;
   border-radius: 110px;
   padding: 30px 35px;
-  box-shadow: 0 6px 12px #800020;
+  box-shadow: 0 8px 14px #BF9B73;
 }
 
 #table-countdown .container-countdown #day, #hour, #minute, #second {
@@ -557,12 +557,12 @@ body::-webkit-scrollbar-thumb {
   color: #BF9B73;
 }
 
-#acara-akad {
+#acara-syukuran {
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
 }
 
-#acara-syukuran {
+#acara-resepsi {
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
 }
