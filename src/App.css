@@ -160,7 +160,7 @@ body::-webkit-scrollbar-thumb {
     padding-top: 100px !important;
   }
   .mouse-scroll-home {
-    padding-top: 170px !important;
+    padding-top: 140px !important;
   }
   .judul1 {
     margin-top: 100px !important;
@@ -172,7 +172,7 @@ body::-webkit-scrollbar-thumb {
     padding-top: 100px !important;
   }
   .mouse-scroll-home {
-    padding-top: 80px !important;
+    padding-top: 56px !important;
   }
 }
 
@@ -503,9 +503,10 @@ body::-webkit-scrollbar-thumb {
   zoom: 1;
   display: inline;
   color: #EDECF1;
-  padding: 5px 10px;
+  padding: 5px 22px;
   background-color: #800020;
   border-radius: 50px;
+  text-decoration: none;
 }
 .fh5co-social-icons li a i {
   font-size: 20px;

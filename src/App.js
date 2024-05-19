@@ -210,7 +210,7 @@ function App() {
         <section className='bg1' id='home'>
           <div className="w-100 text-center pt-4">
             <h1 className="font-esthetic title-pengantin judul1" style={{fontSize: "3.5rem", fontWeight: 700, marginTop: 200}}>The Wedding Of</h1>
-            <div className="">
+            <div className="mb-4">
               <div className="img-crop mx-auto foto-home">
                 <img className="couple-foto" src={Cincin1} alt="bg" />
               </div>
@@ -252,11 +252,11 @@ function App() {
                 <img data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000" width={200} height={200} src={MempelaiPria} alt="mempelai Pria" />
                 <p data-aos="flip-right" data-aos-delay="500" data-aos-duration="2000">Dika Alfarell Haidir Ramdani</p>
                 <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
-                  Putra pertama dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 2, fontWeight: 700, fontSize: "2rem"}}>Bapak Yul Haidir &amp; Ibu Suparti</font>
+                  Putra pertama dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 1.2, fontStyle: "normal", fontSize: "2.2rem"}}>Bapak Yul Haidir &amp; Ibu Suparti</font>
                 </span>
-                <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000"  id="social-media-dika">
+                <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000" id="social-media-dika">
                   <ul className="fh5co-social-icons">
-                    <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/al.haidirr"><img width={15} src={IG} alt="instagram" /></a></li>
+                    <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/al.haidirr"><img width={15} src={IG} alt="instagram" />&nbsp;al.haidirr</a></li>
                   </ul>
                 </div>
                 <div className="position-relative">
@@ -291,11 +291,11 @@ function App() {
                 </div>
                 <p data-aos="flip-left" data-aos-delay="500" data-aos-duration="2000">Siti Novi Nurkomala</p>
                 <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
-                  Putri kedua dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 2, fontWeight: 700, fontSize: "2rem"}}>Bapak Taufik Hidayat &amp; Ibu Yoyoh</font>
+                  Putri kedua dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 1.2, fontStyle: "normal", fontSize: "2.2rem"}}>Bapak Taufik Hidayat &amp; Ibu Yoyoh</font>
                 </span>
                 <div  data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000"  id="social-media-novi">
                   <ul className="fh5co-social-icons">
-                    <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/novinurkom"><img width={15} src={IG} alt="instagram" /></a></li>
+                    <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/novinurkom"><img width={15} src={IG} alt="instagram" />&nbsp;novinurkom</a></li>
                   </ul>
                 </div>
                 <div className="position-relative">
@@ -650,10 +650,10 @@ function App() {
               </div>
             </div>
           </div>
-          <p style={{marginTop: 30, paddingLeft: 20, paddingRight: 20}}>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i. berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.</p>
+          <p style={{marginTop: 30, paddingLeft: 20, paddingRight: 20}}>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak/Ibu/Saudara/i berkenan hadir pada hari bahagia ini. terima kasih atas ucapan, do&apos;a dan perhatian yang diberikan</p>
           <p>See you on our big day!</p>
           <h1 className='font-esthetic'>Novi &amp; Dika</h1>
-          <h1 className='font-esthetic' style={{fontSize: "2rem"}}>Wassalamu&apos;alaikum Warahmatullahi Wabarakatuh</h1>
+          <h1 className='font-esthetic' style={{fontSize: "1.5rem"}}>Wassalamu&apos;alaikum Warahmatullahi Wabarakatuh</h1>
           <div className='position-relative'>
             <div className="bunga-ucapan">
               <img style={{width: "100%"}} src={Bunga2} alt="bunga2" />
