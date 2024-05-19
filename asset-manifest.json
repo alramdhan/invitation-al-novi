@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invitation-al-novi/static/css/main.9197e033.css",
-    "main.js": "/invitation-al-novi/static/js/main.69da44c5.js",
+    "main.css": "/invitation-al-novi/static/css/main.7a01b71c.css",
+    "main.js": "/invitation-al-novi/static/js/main.67c6fa9a.js",
     "static/js/453.66636984.chunk.js": "/invitation-al-novi/static/js/453.66636984.chunk.js",
     "static/media/img-cincin.png": "/invitation-al-novi/static/media/img-cincin.eafb2cb1a90898c58ae9.png",
     "static/media/cincin1.png": "/invitation-al-novi/static/media/cincin1.e4b33dbf89531c152b46.png",
@@ -20,12 +20,12 @@
     "static/media/bg2.jpg": "/invitation-al-novi/static/media/bg2.f384f16fc728468a7a95.jpg",
     "index.html": "/invitation-al-novi/index.html",
     "static/media/instagram.svg": "/invitation-al-novi/static/media/instagram.da7c8b906a74d96374903698f965002d.svg",
-    "main.9197e033.css.map": "/invitation-al-novi/static/css/main.9197e033.css.map",
-    "main.69da44c5.js.map": "/invitation-al-novi/static/js/main.69da44c5.js.map",
+    "main.7a01b71c.css.map": "/invitation-al-novi/static/css/main.7a01b71c.css.map",
+    "main.67c6fa9a.js.map": "/invitation-al-novi/static/js/main.67c6fa9a.js.map",
     "453.66636984.chunk.js.map": "/invitation-al-novi/static/js/453.66636984.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9197e033.css",
-    "static/js/main.69da44c5.js"
+    "static/css/main.7a01b71c.css",
+    "static/js/main.67c6fa9a.js"
   ]
 }
