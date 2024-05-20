@@ -170,42 +170,42 @@ function App() {
   return (
     <div className='App'>
       <audio id="play-song" src={song} preload='true' loop />
-      <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
-        <ul className="navbar-nav nav-justified w-100 align-items-center">
-          <li className="nav-item">
-            <a className="nav-link" href="#home">
-              <FontAwesomeIcon icon={faHome} color='#EEE' />
-              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Home</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#mempelai">
-              <img width={25} src={mempelai} alt="mempelai" />
-              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Mempelai</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#countdown">
-              <img width={25} src={countdown} alt="countdown" />
-              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Tanggal</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#gift">
-              <FontAwesomeIcon icon={faGift} color="#EEE" />
-              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Gift</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#ucapan">
-              <FontAwesomeIcon icon={faComments} color='#EEE' />
-              <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Ucapan</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
       
       <main className='container-main' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
+        <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
+          <ul className="navbar-nav nav-justified w-100 align-items-center">
+            <li className="nav-item">
+              <a className="nav-link" href="#home">
+                <FontAwesomeIcon icon={faHome} color='#EEE' />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Home</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#mempelai">
+                <img width={25} src={mempelai} alt="mempelai" />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Mempelai</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#countdown">
+                <img width={25} src={countdown} alt="countdown" />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Tanggal</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#gift">
+                <FontAwesomeIcon icon={faGift} color="#EEE" />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Gift</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#ucapan">
+                <FontAwesomeIcon icon={faComments} color='#EEE' />
+                <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Ucapan</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
         <Fireworks decorateOptions={decorateOptions} autorun={{speed: 3, duration: 10000, delay: 4500}} />
         <section className='bg1' id='home'>
           <div className="w-100 text-center pt-4">
@@ -236,13 +236,13 @@ function App() {
           <div className='w-100 text-center pt-4' style={{marginBottom: 40}}>
             <img data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" width="70%" src={Bismillah} alt="bismillah"  />
 
-            <h3 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" className="font-esthetic" style={{fontSize: "2rem", marginTop: 25}}>Assalamu&apos;alaikum Wr. Wb.</h3>
-            <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" style={{padding: 15}}>
+            <h3 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" style={{fontSize: "1.6rem", marginTop: 25, color: "#800020"}}>Assalamu&apos;alaikum Wr. Wb.</h3>
+            <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" style={{padding: "5px 15px"}}>
               Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta Kerabat sekalian untuk menghadiri acara Pernikahan kami:
             </p>
             <div className="position-relative">
               <div className="position-absolute" style={{top: "0%", left: "15%"}}>
-                <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love-reverse" viewBox="0 0 16 16">
                   <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
                 </svg>
               </div>
@@ -250,11 +250,11 @@ function App() {
             <div className="layer-sangmempelai">
               <div>
                 <img data-aos="fade-left" data-aos-delay="500" data-aos-duration="2000" width={200} height={200} src={MempelaiPria} alt="mempelai Pria" />
-                <p data-aos="flip-right" data-aos-delay="500" data-aos-duration="2000">Dika Alfarell Haidir Ramdani</p>
-                <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
+                <p data-aos="fade-up" data-aos-delay="750" data-aos-duration="2000">Dika Alfarell Haidir Ramdani</p>
+                <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
                   Putra pertama dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 1.2, fontStyle: "normal", fontSize: "2.2rem"}}>Bapak Yul Haidir &amp; Ibu Suparti</font>
-                </span>
-                <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000" id="social-media-dika">
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="2000" id="social-media-dika">
                   <ul className="fh5co-social-icons">
                     <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/al.haidirr"><img width={15} src={IG} alt="instagram" />&nbsp;al.haidirr</a></li>
                   </ul>
@@ -283,17 +283,17 @@ function App() {
                 </div>
                 <img data-aos="fade-right" data-aos-delay="500" data-aos-duration="2000" width={200} height={200} src={MempelaiWanita} alt="mempelai Pria" />
                 <div className="position-relative">
-                  <div className="position-absolute" style={{top: "-10px", left: "10%"}}>
-                    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                  <div className="position-absolute" style={{top: "-15px", left: "10%"}}>
+                    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love-reverse" viewBox="0 0 16 16">
                       <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
                     </svg>
                   </div>
                 </div>
-                <p data-aos="flip-left" data-aos-delay="500" data-aos-duration="2000">Siti Novi Nurkomala</p>
-                <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
+                <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">Siti Novi Nurkomala</p>
+                <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
                   Putri kedua dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 1.2, fontStyle: "normal", fontSize: "2.2rem"}}>Bapak Taufik Hidayat &amp; Ibu Yoyoh</font>
-                </span>
-                <div  data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000"  id="social-media-novi">
+                </div>
+                <div  data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="2000"  id="social-media-novi">
                   <ul className="fh5co-social-icons">
                     <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/novinurkom"><img width={15} src={IG} alt="instagram" />&nbsp;novinurkom</a></li>
                   </ul>
@@ -448,8 +448,8 @@ function App() {
               </table>
             </Card>
             <div className="position-relative" style={{zIndex: 100}}>
-              <div className="position-absolute" style={{top: "0%", right: "20%"}}>
-                <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+              <div className="position-absolute" style={{top: "-20px", right: "20%"}}>
+                <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love-reverse" viewBox="0 0 16 16">
                   <path fill="#800020" fillRule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"></path>
                 </svg>
               </div>
@@ -490,20 +490,21 @@ function App() {
               </table>
             </Card>
             <div className="position-relative" style={{zIndex: 150}}>
-              <div className="position-absolute" style={{top: "-20px", left: "12%"}}>
+              <div className="position-absolute" style={{top: "-50px", left: "12%"}}>
                 <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
                   <path fill="#800020" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
                 </svg>
               </div>
             </div>
             <div className='my-4'>
-              <div style={{paddingLeft: 30, paddingRight: 30}}>
+              <div style={{paddingLeft: 50, paddingRight: 50, marginTop: 60}}>
                 <h1 data-aos="fade-up" data-aos-duration="1000" className='text-secondary'>ADAB WALIMAH</h1>
                 <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" className='text-secondary'>Tanpa mengurangi rasa hormat, ada hal-hal dalam adab seorang muslim ketika menghadiri walimah yang harus diperhatikan</p>
               </div>
-              <div data-aos="flip-right" data-aos-delay="400" data-aos-duration="2000" id='adab-walimah'>
-                <img className='img-daftar-adab-walimah' src={AdabWalimah} alt="adab-walimah" />
-              </div>
+              <img data-aos="flip-right" data-aos-delay="400" data-aos-duration="2000" className='img-daftar-adab-walimah' width="100%" style={{padding: "8px 24px"}} src={AdabWalimah} alt="adab-walimah" />
+              {/* <div data-aos="flip-right" data-aos-delay="400" data-aos-duration="2000" id='adab-walimah'> */}
+                {/* <img className='img-daftar-adab-walimah' src={AdabWalimah} alt="adab-walimah" /> */}
+              {/* </div> */}
             </div>
           </div>
           <div>
@@ -586,7 +587,7 @@ function App() {
               </div>
               <div className="position-relative">
                 <div className="position-absolute" style={{top: "0%", left: "10%"}}>
-                  <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                  <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love-reverse" viewBox="0 0 16 16">
                     <path fill="#EDECF1" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
                   </svg>
                 </div>
@@ -653,7 +654,7 @@ function App() {
           <p style={{marginTop: 30, paddingLeft: 20, paddingRight: 20}}>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak/Ibu/Saudara/i berkenan hadir pada hari bahagia ini. terima kasih atas ucapan, do&apos;a dan perhatian yang diberikan</p>
           <p>See you on our big day!</p>
           <h1 className='font-esthetic'>Novi &amp; Dika</h1>
-          <h1 className='font-esthetic' style={{fontSize: "1.5rem"}}>Wassalamu&apos;alaikum Warahmatullahi Wabarakatuh</h1>
+          <h1 style={{fontSize: "1.6rem", color: "#800020", padding: "4px 20px"}}>Wassalamu&apos;alaikum Warahmatullahi Wabarakatuh</h1>
           <div className='position-relative'>
             <div className="bunga-ucapan">
               <img style={{width: "100%"}} src={Bunga2} alt="bunga2" />
