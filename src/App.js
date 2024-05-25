@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
-import 'animate.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -8,6 +7,7 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCalendar,
+  faCalendarDay,
   faHome,
   faComments,
   faClock,
@@ -19,10 +19,10 @@ import {
 import Fireworks from 'react-canvas-confetti/dist/presets/pride'
 import IG from './images/instagram.svg';
 import mempelai from './images/mempelai.png';
-import countdown from './images/countdown.png';
 // main
 import Cincin1 from './images/cincin1.png';
 import WelcomeModal from './Welcome.js';
+import Petals from './Petals.js';
 import Bismillah from './images/bismillah.png';
 import DividerStyle from './images/divider.png';
 import Bunga1 from './images/bg-mempelai1.png';
@@ -95,7 +95,7 @@ function App() {
     setSelectedAbsen(parseInt(e.target.value));
   }
 
-  const until = "2024-06-23T09:00:00";
+  const until = "2024-06-21T09:00:00";
   const count = (new Date(until)).getTime();
   
   setInterval(() => {
@@ -169,6 +169,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Petals />
       <audio id="play-song" src={song} preload='true' loop />
       
       <main className='container-main' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
@@ -182,13 +183,13 @@ function App() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#mempelai">
-                <img width={25} src={mempelai} alt="mempelai" />
+                <img width={24} src={mempelai} alt="mempelai" />
                 <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Mempelai</span>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#countdown">
-                <img width={25} src={countdown} alt="countdown" />
+                <FontAwesomeIcon icon={faCalendarDay} color="#EEE" />
                 <span className="d-block" style={{color: "#EEE", fontSize: 0.7 + "rem"}}>Tanggal</span>
               </a>
             </li>
@@ -237,7 +238,7 @@ function App() {
             <img data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" width="70%" src={Bismillah} alt="bismillah"  />
 
             <h3 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" style={{fontSize: "1.6rem", marginTop: 25, color: "#800020"}}>Assalamu&apos;alaikum Wr. Wb.</h3>
-            <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" style={{padding: "5px 15px"}}>
+            <p data-aos="fade-up" data-aos-delay="750" data-aos-duration="1000" style={{padding: "5px 15px"}}>
               Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta Kerabat sekalian untuk menghadiri acara Pernikahan kami:
             </p>
             <div className="position-relative">
@@ -378,7 +379,7 @@ function App() {
               </div>
             </div>
             <Card data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" id='acara-syukuran'>
-              <h1 className='font-esthetic'>Syukuran</h1>
+              <h1 className='font-esthetic'>Tasyakuran Pernikahan</h1>
               <hr />
               <table className='table table-borderless m-0 p-0 w-100' id='table-acara-syukuran'>
                 <tbody>
@@ -539,7 +540,7 @@ function App() {
               </div>
               <div className="position-relative">
                 <div className="position-absolute" style={{top: "0%", right: "10%"}}>
-                  <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
+                  <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love-reverse" viewBox="0 0 16 16">
                     <path fill="#EDECF1" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
                   </svg>
                 </div>
@@ -587,7 +588,7 @@ function App() {
               </div>
               <div className="position-relative">
                 <div className="position-absolute" style={{top: "0%", left: "10%"}}>
-                  <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love-reverse" viewBox="0 0 16 16">
+                  <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" className="opacity-50 animate-love" viewBox="0 0 16 16">
                     <path fill="#EDECF1" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path>
                   </svg>
                 </div>

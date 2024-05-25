@@ -17,9 +17,10 @@ function WelcomeModal() {
 
     const onClick = () => {
         setModalClose("tutup-welcome");
+        const audio = document.getElementById("play-song");
+        audio.load();
         setInterval(() => {
             setShow(false);
-            const audio = document.getElementById("play-song");
             audio.play();
         }, 3000);
     };
