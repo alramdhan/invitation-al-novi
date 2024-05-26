@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import './App.css';
+import 'animate.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -210,17 +211,39 @@ function App() {
         <Fireworks decorateOptions={decorateOptions} autorun={{speed: 3, duration: 10000, delay: 4500}} />
         <section className='bg1' id='home'>
           <div className="w-100 text-center pt-4">
-            <h1 className="font-esthetic title-pengantin judul1" style={{fontSize: "3.5rem", fontWeight: 700, marginTop: 200}}>The Wedding Of</h1>
+            <h1 className="font-esthetic judul1 pb-0" style={{fontSize: "3.2rem", fontWeight: 700, marginTop: 200}}>The Wedding Of</h1>
             <div className="mb-4">
               <div className="img-crop mx-auto foto-home">
                 <img className="couple-foto" src={Cincin1} alt="bg" />
               </div>
             </div>
 
-            <h3 className="font-esthetic title-pengantin" style={{fontSize: "2.5rem"}}>Al & Novi</h3>
-            <p className="mb-0" style={{fontSize: 1.5+"rem"}}>Minggu, 23 Juni 2024</p>
+            <div className="title-pengantin">
+              <h3 className="font-esthetic p-pria" style={{fontSize: "2.5rem"}}>Al</h3>
+              <h3 className="font-esthetic" style={{fontSize: "2.2rem"}}>&amp;</h3>
+              <h3 className="font-esthetic p-wanita" style={{fontSize: "2.5rem"}}>Novi</h3>
+            </div>
+            <div className="mb-0 d-flex align-items-center justify-content-center" id="title-date">
+              <p style={{
+                borderTop: "2px solid #800020",
+                borderBottom: "2px solid #800020",
+                minWidth: "80px"
+              }}>Minggu</p><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <p style={{
+                borderLeft: "2px solid #800020",
+                borderRight: "2px solid #800020",
+                padding: 10,
+              }}>23<br />Juni</p>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <p style={{
+                borderTop: "2px solid #800020",
+                borderBottom: "2px solid #800020",
+                minWidth: "80px"
+              }}>&nbsp;&nbsp;2024&nbsp;&nbsp;</p>
+            </div>
 
-            <a className="btn btn-sm shadow btn-outline-burgundy rounded-pill px-3 my-2" target="_blank" rel='noreferrer' href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTh0ZGU5ZzVwa28xdnBndTdwMmZxYnNhNnIgZjdiYjBmNmJlYzI5Y2NkNmM2ZDJjYThlOTg2MDhhYjM2NTgwZDRmMDExNmQ1YWVhMGY3ZDY3N2ZlNzQ0YjNmY0Bn&tmsrc=f7bb0f6bec29ccd6c6d2ca8e98608ab36580d4f0116d5aea0f7d677fe744b3fc%40group.calendar.google.com">
+            <a className="btn btn-sm shadow btn-outline-burgundy rounded-pill px-3 my-2" id="btn-save-the-date" target="_blank" rel='noreferrer' href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTh0ZGU5ZzVwa28xdnBndTdwMmZxYnNhNnIgZjdiYjBmNmJlYzI5Y2NkNmM2ZDJjYThlOTg2MDhhYjM2NTgwZDRmMDExNmQ1YWVhMGY3ZDY3N2ZlNzQ0YjNmY0Bn&tmsrc=f7bb0f6bec29ccd6c6d2ca8e98608ab36580d4f0116d5aea0f7d677fe744b3fc%40group.calendar.google.com">
               <FontAwesomeIcon icon={faCalendar} />&nbsp;Save The Date
             </a>
 
