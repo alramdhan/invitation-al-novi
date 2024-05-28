@@ -55,9 +55,10 @@ body {
   right: 12px;
   min-height: 46px;
   border-radius: 50%;
-  background-color: #800020;
-  border: 1px solid #BF9B73;
-  box-shadow: 0px 2px 8px #BF9B73;
+  z-index: 100;
+  background-color: #BF9B73;
+  border: 1px solid #800020;
+  box-shadow: 0px 3px 8px #800020;
 }
 
 body::-webkit-scrollbar {
