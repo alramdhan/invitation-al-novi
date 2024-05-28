@@ -180,7 +180,7 @@ function App() {
       
       <main className='container-main' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
         <Button id='btn-control-audio' onClick={controlAudio}>
-          <img width={20} src={playAudio ? ImgPlay : ImgPause} alt="play" />
+          <img width={16} src={playAudio ? ImgPlay : ImgPause} alt="play" />
         </Button>
         <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
           <ul className="navbar-nav nav-justified w-100 align-items-center">
