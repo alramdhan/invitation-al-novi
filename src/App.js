@@ -17,13 +17,14 @@ import {
   faGift,
   faGifts
 } from '@fortawesome/free-solid-svg-icons';
-import Fireworks from 'react-canvas-confetti/dist/presets/pride'
 import IG from './images/instagram.svg';
 import mempelai from './images/mempelai.png';
 // main
-import Cincin1 from './images/cincin1.png';
 import WelcomeModal from './Welcome.js';
 import Petals from './Petals.js';
+import ImgPlay from './images/play.png';
+import ImgPause from './images/pause.png';
+import Cincin1 from './images/cincin1.png';
 import Bismillah from './images/bismillah.png';
 import DividerStyle from './images/divider.png';
 import Bunga1 from './images/bg-mempelai1.png';
@@ -41,6 +42,7 @@ const baseUrl = "https://invitation-alnovi.000webhostapp.com/api";
 function App() {
   const [ucapan, setUcapan] = useState(null);
   const [selectedAbsen, setSelectedAbsen] = useState(-1);
+  const [playAudio, setPlayAudio] = useState(true);
 
   useEffect(() => {
     AOS.init();
@@ -51,6 +53,16 @@ function App() {
     axios.get(`${baseUrl}/v1/getUcapan`).then((response) => {
       setUcapan(response.data);
     });
+  }
+
+  const controlAudio = () => {
+    const audio = document.getElementById("play-song");
+    setPlayAudio(!playAudio);
+    if(!playAudio) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
   }
 
   const kirimUcapan = () => {
@@ -107,13 +119,6 @@ function App() {
     document.getElementById('minute').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     document.getElementById('second').innerText = Math.floor((distance % (1000 * 60)) / 1000);
   }, 1000);
-
-  const decorateOptions = (defaultOption) => {
-    return {
-      ...defaultOption,
-      angle: 90, origin: { y: 1 }, zIndex: 1000
-    }
-  }
 
   const [showT, setShowT] = useState(false);
 
@@ -174,6 +179,9 @@ function App() {
       <audio id="play-song" src={song} preload='true' loop />
       
       <main className='container-main' data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true">
+        <Button id='btn-control-audio' onClick={controlAudio}>
+          <img width={20} src={playAudio ? ImgPlay : ImgPause} alt="play" />
+        </Button>
         <nav className="navbar burgundy navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-menu">
           <ul className="navbar-nav nav-justified w-100 align-items-center">
             <li className="nav-item">
@@ -208,7 +216,7 @@ function App() {
             </li>
           </ul>
         </nav>
-        <Fireworks decorateOptions={decorateOptions} autorun={{speed: 3, duration: 10000, delay: 4500}} />
+        
         <section className='bg1' id='home'>
           <div className="w-100 text-center pt-4">
             <h1 className="font-esthetic judul1 pb-0" style={{fontSize: "3.2rem", fontWeight: 700, marginTop: 200}}>The Wedding Of</h1>

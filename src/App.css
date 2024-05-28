@@ -49,6 +49,17 @@ body {
   margin: auto;
 }
 
+.container-main #btn-control-audio {
+  position: fixed;
+  top: 50%;
+  right: 12px;
+  min-height: 46px;
+  border-radius: 50%;
+  background-color: #800020;
+  border: 1px solid #BF9B73;
+  box-shadow: 0px 2px 8px #BF9B73;
+}
+
 body::-webkit-scrollbar {
   width: 5px;
 }
