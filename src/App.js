@@ -108,7 +108,7 @@ function App() {
     setSelectedAbsen(parseInt(e.target.value));
   }
 
-  const until = "2024-06-21T09:00:00";
+  const until = "2024-06-23T09:00:00";
   const count = (new Date(until)).getTime();
   
   setInterval(() => {
@@ -298,7 +298,7 @@ function App() {
                     </svg>
                   </div>
                 </div>
-                <div data-aos="flip-up" data-aos-delay="1000" data-aos-duration="2000" style={{paddingLeft: 25, paddingRight: 25}}>
+                <div data-aos="flip-up" data-aos-delay="1250" data-aos-duration="2000" style={{paddingLeft: 25, paddingRight: 25}}>
                   <table>
                     <tbody>
                       <tr>
@@ -325,7 +325,7 @@ function App() {
                 <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000" style={{color: "#BF9B73", fontSize: "1.2rem"}}>
                   Putri kedua dari <br /><font style={{fontFamily: '"Estonia", Arial, serif', color: "#800020", letterSpacing: 1.2, fontStyle: "normal", fontSize: "2.2rem"}}>Bapak Taufik Hidayat &amp; Ibu Yoyoh</font>
                 </div>
-                <div  data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="2000"  id="social-media-novi">
+                <div  data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="2000"  id="social-media-novi">
                   <ul className="fh5co-social-icons">
                     <li><a target="_blank" rel='noreferrer' href="https://www.instagram.com/novinurkom"><img width={15} src={IG} alt="instagram" />&nbsp;novinurkom</a></li>
                   </ul>
@@ -398,7 +398,7 @@ function App() {
                 </tbody>
               </table>
             </div>
-            <p data-aos="fade-down"  data-aos-delay="1000" data-aos-duration="1500" className="my-4" style={{paddingLeft: 16, paddingRight: 16}}>
+            <p data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1500" className="my-4" style={{paddingLeft: 16, paddingRight: 16}}>
               Dengan memohon rahmat dan ridho Allah Subhanallahu Wa Ta&apos;ala, Insha Allah kami akan menyelenggarakan
               acara :
             </p>
@@ -409,7 +409,7 @@ function App() {
                 </svg>
               </div>
             </div>
-            <Card data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" id='acara-syukuran'>
+            <Card data-aos="zoom-in" data-aos-delay="1250" data-aos-duration="1000" id='acara-syukuran'>
               <h1 className='font-esthetic'>Tasyakuran Pernikahan</h1>
               <hr />
               <table className='table table-borderless m-0 p-0 w-100' id='table-acara-syukuran'>
@@ -451,7 +451,7 @@ function App() {
                 </svg>
               </div>
             </div>
-            <Card data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1500" id='acara-akad'>
+            <Card data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1500" id='acara-akad'>
               <h1 className='font-esthetic'>Akad</h1>
               <hr />
               <table className='table table-borderless m-0 p-0 w-100' id='table-acara-akad'>
