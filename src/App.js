@@ -24,7 +24,7 @@ import WelcomeModal from './Welcome.js';
 import Petals from './Petals.js';
 import ImgPlay from './images/play.png';
 import ImgPause from './images/pause.png';
-import Cincin1 from './images/cincin1.png';
+import FotoMain from './images/foto-main.png';
 import Bismillah from './images/bismillah.png';
 import DividerStyle from './images/divider.png';
 import Bunga1 from './images/bg-mempelai1.png';
@@ -222,7 +222,7 @@ function App() {
             <h1 className="font-esthetic judul1 pb-0" style={{fontSize: "3.2rem", fontWeight: 700, marginTop: 200}}>The Wedding Of</h1>
             <div className="mb-4">
               <div className="img-crop mx-auto foto-home">
-                <img className="couple-foto" src={Cincin1} alt="bg" />
+                <img className="couple-foto" src={FotoMain} alt="bg" />
               </div>
             </div>
 
