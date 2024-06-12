@@ -57,10 +57,11 @@ function WelcomeModal() {
         })();
     };
 
-    const onClick = () => {
-        setModalClose("tutup-welcome");
+    const onClick = async () => {
         const audio = document.getElementById("play-song");
-        audio.load();
+        await audio.load();
+        setModalClose("tutup-welcome");
+        audio.play();
         document.querySelector(".judul1").classList.add("animate__animated");
         document.querySelector(".judul1").classList.add("animate__fadeInDown");
         document.querySelector(".judul1").classList.add("animate__delay-3s");
@@ -109,7 +110,6 @@ function WelcomeModal() {
                 zIndex: 1057
             });
             animation();
-            audio.play();
         }, 3000);
     };
 

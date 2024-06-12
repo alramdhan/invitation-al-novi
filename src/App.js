@@ -32,6 +32,7 @@ import Bunga2 from './images/bg-mempelai2.png';
 import MempelaiPria from './images/mempelai-pria.png';
 import MempelaiWanita from './images/mempelai-wanita.png';
 import AdabWalimah from './images/adab-walimah.png';
+import Clock from './images/clock-regular.svg';
 import song from './audio/You-Are-The-One.mp3';
 import { Badge, Button, Card, Form, Toast, ToastContainer } from 'react-bootstrap';
 import axios from 'axios';
@@ -40,6 +41,14 @@ import Swal from 'sweetalert2';
 const baseUrl = "https://invitation-alnovi.000webhostapp.com/api";
 
 function App() {
+  const colorAvatar = [
+    "#FDDE55",
+    "#C738BD",
+    "#EE4E4E",
+    "#9BEC00",
+    "#615EFC",
+    "#90D26D",
+  ];
   const [ucapan, setUcapan] = useState(null);
   const [selectedAbsen, setSelectedAbsen] = useState(-1);
   const [playAudio, setPlayAudio] = useState(true);
@@ -132,45 +141,30 @@ function App() {
 
     const interval = Math.floor(seconds / 31536000);
     if(interval > 1) {
-      return interval + " years ago";
-    }
-    if(interval === 1) {
-      return interval + " year ago";
+      return interval + " tahun lalu";
     }
 
     const month = Math.floor(seconds / 2628000);
     if(month > 1) {
-      return month + " months ago";
-    }
-    if(month === 1) {
-      return month + " month ago";
+      return month + " bulan lalu";
     }
 
     const day = Math.floor(seconds / 86400);
     if(day > 1) {
-      return day + " days ago";
-    }
-    if(day === 1) {
-      return day + " day ago";
+      return day + " hari lalu";
     }
 
     const hour = Math.floor(seconds / 3600);
     if(hour > 1) {
-      return hour + " hours ago";
-    }
-    if(hour === 1) {
-      return hour + " hour ago";
+      return hour + " jam lalu";
     }
 
     const minute = Math.floor(seconds / 60);
     if(minute > 1) {
-      return minute + " minutes ago";
-    }
-    if(minute === 1) {
-      return minute + " minute ago";
+      return minute + " menit lalu";
     }
 
-    return "just now";
+    return "baru saja";
   }
 
   return (
@@ -666,16 +660,43 @@ function App() {
                     {ucapan != null ? ucapan.data.map((u) => {
                       const badge = u.absen === 1 ? <Badge bg='success' className='pb-0' style={{fontSize: ".75rem"}}>Hadir</Badge> : <Badge bg='danger' className='pb-0' style={{fontSize: ".75rem"}}>Tidak Hadir</Badge>;
                       console.log("da", u.tanggal);
+                      const name = u.nama_tamu.split(" ");
+                      var avatar = "";
+                      if(name.length === 1) {
+                        avatar = name[0].substring(0, 1).toUpperCase();
+                      } else {
+                        avatar = name[0].substring(0, 1).toUpperCase() + name[name.length-1].substring(0,1).toUpperCase();
+                      }
+                      const bg = colorAvatar[Math.floor(Math.random() * 6)]
+                      const colorText = colorAvatar.indexOf(bg) <= 3 ? "#020202" : "#FFF";
                       return (
                         <tr key={u.id}>
                           <td colSpan={2}>
                             <div className='kotak-ucapannya mb-2'>
-                              <div className='d-flex justify-content-between align-items-center'>
-                                <h5>{u.nama_tamu}&nbsp;&nbsp;&nbsp;{badge}</h5>
-                                <span style={{fontSize: ".8rem"}}>{timeSince(new Date(u.tanggal))}</span>
-                              </div>
-                              <hr className='mb-2 m-0 p-0' />
-                              <span>{u.ucapan}</span>
+                              <table style={{width: "100%"}}>
+                                <tbody>
+                                  <tr>
+                                    <td rowSpan={2} valign='top' style={{width: "5%"}}>
+                                      <div className='avatar-ucapan' style={{background: bg, color: colorText}}>
+                                        {avatar}
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <h5 className='mb-0' style={{"color": "#683448"}}>{u.nama_tamu}&nbsp;&nbsp;&nbsp;{badge}</h5>
+                                      <div style={{fontSize: ".8rem", color: "#6C6170"}}>
+                                        <img src={Clock} alt="pending" width={11} height={11} />
+                                        <span>&nbsp;&nbsp;{timeSince(new Date(u.tanggal))}</span>
+                                      </div>
+                                      <hr className='mb-2 m-0 p-0' />
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p style={{color: "#200220"}}>{u.ucapan}</p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
                           </td>
                         </tr>

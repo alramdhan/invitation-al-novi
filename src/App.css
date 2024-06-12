@@ -686,6 +686,17 @@ body::-webkit-scrollbar-thumb {
   color: #EDECF1;
 }
 
+.kotak-ucapannya .avatar-ucapan {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  border-radius: 30px;
+  border: 1px solid #113468;
+}
+
 #ucapan #container-kumpulan-ucapan {
   max-height: 250px;
   overflow: auto;
