@@ -33,6 +33,8 @@ import MempelaiPria from './images/mempelai-pria.png';
 import MempelaiWanita from './images/mempelai-wanita.png';
 import AdabWalimah from './images/adab-walimah.png';
 import Clock from './images/clock-regular.svg';
+import BCA from './images/bca.png';
+import Mandiri from './images/mandiri.svg';
 import song from './audio/You-Are-The-One.mp3';
 import { Badge, Button, Card, Form, Toast, ToastContainer } from 'react-bootstrap';
 import axios from 'axios';
@@ -563,7 +565,10 @@ function App() {
               <h3 className='font-esthetic text-secondary'>Wedding Gift</h3>
               <p>Bagi yang ingin memberikan tanda kasih, dapat mengirimkan melalui fitur di bawah ini:</p>
               <div className='rekening1'>
-                BCA<br />
+                <div className='bg-bank-ic d-inline-flex mb-2' style={{padding: "6px 12px"}}>
+                  <img src={BCA} alt="bca.png" width={72} />
+                </div>
+                <br />
                 7370269526
                 <Button className='btn btn-outline bg-transparent border-0' onClick={() => copyToClipboard("7370269526")}>
                   <FontAwesomeIcon icon={faCopy} />
@@ -578,7 +583,10 @@ function App() {
                 </div>
               </div>
               <div className='rekening2 mt-4'>
-                Mandiri<br />
+              <div className='bg-bank-ic d-inline-flex mb-2' style={{padding: "6px 12px"}}>
+                  <img src={Mandiri} alt="bca.png" width="84" />
+                </div>
+                <br />
                 1330015855299
                 <Button className='btn btn-outline bg-transparent border-0' onClick={() => copyToClipboard("1330015855299")}>
                   <FontAwesomeIcon icon={faCopy} />
@@ -586,7 +594,10 @@ function App() {
                 Yul Haidir
               </div>
               <div className='rekening3 mt-4'>
-                BCA<br />
+                <div className='bg-bank-ic d-inline-flex mb-2' style={{padding: "6px 12px"}}>
+                  <img src={BCA} alt="bca.png" width={72} />
+                </div>
+                <br />
                 7360721269
                 <Button className='btn btn-outline bg-transparent border-0' onClick={() => copyToClipboard("7360721269")}>
                   <FontAwesomeIcon icon={faCopy} />
@@ -612,7 +623,7 @@ function App() {
                     </tr>
                     <tr>
                       <td>
-                        <p style={{fontSize: 11}}>Kampung Girang, gg. inpess RT 003/008, Kel. Harjasari, Kec. Bogor Selatan, Kota Bogor 16138</p>
+                        <p style={{fontSize: 12}}>Kampung Girang, gg. inpess RT 003/008, Kel. Harjasari, Kec. Bogor Selatan, Kota Bogor 16138</p>
                       </td>
                     </tr>
                   </tbody>

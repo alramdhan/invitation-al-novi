@@ -647,6 +647,12 @@ body::-webkit-scrollbar-thumb {
   right: 0px;
 }
 
+#gift .bg-bank-ic {
+  background-color: #F2F9F8D3;
+  border: 1px solid #113468;
+  border-radius: 7.5px;
+}
+
 #gift .rekening1,
 #gift .rekening2,
 #gift .rekening3 {
