@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invitation-al-novi/static/css/main.757f286e.css",
-    "main.js": "/invitation-al-novi/static/js/main.009a939f.js",
+    "main.css": "/invitation-al-novi/static/css/main.1c7a05b3.css",
+    "main.js": "/invitation-al-novi/static/js/main.2f3e8728.js",
     "static/js/453.66636984.chunk.js": "/invitation-al-novi/static/js/453.66636984.chunk.js",
     "static/media/img-cincin.png": "/invitation-al-novi/static/media/img-cincin.eafb2cb1a90898c58ae9.png",
     "static/media/You-Are-The-One.mp3": "/invitation-al-novi/static/media/You-Are-The-One.4b17bced152b8e97610f.mp3",
@@ -17,15 +17,17 @@
     "static/media/bismillah.png": "/invitation-al-novi/static/media/bismillah.4abee8ba3fc280700d1d.png",
     "static/media/layer-ayat.png": "/invitation-al-novi/static/media/layer-ayat.0395da094b9d0c34cabc.png",
     "static/media/bg2.jpg": "/invitation-al-novi/static/media/bg2.f384f16fc728468a7a95.jpg",
+    "static/media/bca.png": "/invitation-al-novi/static/media/bca.cac40dfe8d98ff085571.png",
+    "static/media/mandiri.svg": "/invitation-al-novi/static/media/mandiri.bc343b798197670f32fca0bbf59a429c.svg",
     "index.html": "/invitation-al-novi/index.html",
     "static/media/instagram.svg": "/invitation-al-novi/static/media/instagram.da7c8b906a74d96374903698f965002d.svg",
     "static/media/clock-regular.svg": "/invitation-al-novi/static/media/clock-regular.2a4403fa1ad992eb5acd2f0deeef390d.svg",
-    "main.757f286e.css.map": "/invitation-al-novi/static/css/main.757f286e.css.map",
-    "main.009a939f.js.map": "/invitation-al-novi/static/js/main.009a939f.js.map",
+    "main.1c7a05b3.css.map": "/invitation-al-novi/static/css/main.1c7a05b3.css.map",
+    "main.2f3e8728.js.map": "/invitation-al-novi/static/js/main.2f3e8728.js.map",
     "453.66636984.chunk.js.map": "/invitation-al-novi/static/js/453.66636984.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.757f286e.css",
-    "static/js/main.009a939f.js"
+    "static/css/main.1c7a05b3.css",
+    "static/js/main.2f3e8728.js"
   ]
 }
