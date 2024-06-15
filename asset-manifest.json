@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invitation-al-novi/static/css/main.1c7a05b3.css",
-    "main.js": "/invitation-al-novi/static/js/main.2f3e8728.js",
+    "main.css": "/invitation-al-novi/static/css/main.6ed8b835.css",
+    "main.js": "/invitation-al-novi/static/js/main.840d29f1.js",
     "static/js/453.66636984.chunk.js": "/invitation-al-novi/static/js/453.66636984.chunk.js",
     "static/media/img-cincin.png": "/invitation-al-novi/static/media/img-cincin.eafb2cb1a90898c58ae9.png",
     "static/media/You-Are-The-One.mp3": "/invitation-al-novi/static/media/You-Are-The-One.4b17bced152b8e97610f.mp3",
@@ -14,6 +14,7 @@
     "static/media/adab-walimah.png": "/invitation-al-novi/static/media/adab-walimah.0d76369e37dccbb2c4f3.png",
     "static/media/bg1.jpg": "/invitation-al-novi/static/media/bg1.44944320f0fd3edc9e61.jpg",
     "static/media/bg-welcome.jfif": "/invitation-al-novi/static/media/bg-welcome.625668eac9b8bd44e775.jfif",
+    "static/media/bri.png": "/invitation-al-novi/static/media/bri.278cd927417badad34eb.png",
     "static/media/bismillah.png": "/invitation-al-novi/static/media/bismillah.4abee8ba3fc280700d1d.png",
     "static/media/layer-ayat.png": "/invitation-al-novi/static/media/layer-ayat.0395da094b9d0c34cabc.png",
     "static/media/bg2.jpg": "/invitation-al-novi/static/media/bg2.f384f16fc728468a7a95.jpg",
@@ -22,12 +23,12 @@
     "index.html": "/invitation-al-novi/index.html",
     "static/media/instagram.svg": "/invitation-al-novi/static/media/instagram.da7c8b906a74d96374903698f965002d.svg",
     "static/media/clock-regular.svg": "/invitation-al-novi/static/media/clock-regular.2a4403fa1ad992eb5acd2f0deeef390d.svg",
-    "main.1c7a05b3.css.map": "/invitation-al-novi/static/css/main.1c7a05b3.css.map",
-    "main.2f3e8728.js.map": "/invitation-al-novi/static/js/main.2f3e8728.js.map",
+    "main.6ed8b835.css.map": "/invitation-al-novi/static/css/main.6ed8b835.css.map",
+    "main.840d29f1.js.map": "/invitation-al-novi/static/js/main.840d29f1.js.map",
     "453.66636984.chunk.js.map": "/invitation-al-novi/static/js/453.66636984.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c7a05b3.css",
-    "static/js/main.2f3e8728.js"
+    "static/css/main.6ed8b835.css",
+    "static/js/main.840d29f1.js"
   ]
 }
