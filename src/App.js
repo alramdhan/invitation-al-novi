@@ -35,6 +35,7 @@ import AdabWalimah from './images/adab-walimah.png';
 import Clock from './images/clock-regular.svg';
 import BCA from './images/bca.png';
 import Mandiri from './images/mandiri.svg';
+import BRI from './images/bri.png';
 import song from './audio/You-Are-The-One.mp3';
 import { Badge, Button, Card, Form, Toast, ToastContainer } from 'react-bootstrap';
 import axios from 'axios';
@@ -595,10 +596,10 @@ function App() {
               </div>
               <div className='rekening3 mt-4'>
                 <div className='bg-bank-ic d-inline-flex mb-2' style={{padding: "6px 12px"}}>
-                  <img src={BCA} alt="bca.png" width={72} />
+                  <img src={BRI} alt="bca.png" width={72} />
                 </div>
                 <br />
-                7360721269
+                038701042679508
                 <Button className='btn btn-outline bg-transparent border-0' onClick={() => copyToClipboard("7360721269")}>
                   <FontAwesomeIcon icon={faCopy} />
                 </Button><br />
