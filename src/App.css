@@ -648,6 +648,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 #gift .bg-bank-ic {
+  width: 110px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
   background-color: #F2F9F8D3;
   border: 1px solid #113468;
   border-radius: 7.5px;

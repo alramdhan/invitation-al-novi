@@ -585,7 +585,7 @@ function App() {
               </div>
               <div className='rekening2 mt-4'>
               <div className='bg-bank-ic d-inline-flex mb-2' style={{padding: "6px 12px"}}>
-                  <img src={Mandiri} alt="bca.png" width="84" />
+                  <img src={Mandiri} alt="bca.png" width={84} />
                 </div>
                 <br />
                 1330015855299
@@ -596,7 +596,7 @@ function App() {
               </div>
               <div className='rekening3 mt-4'>
                 <div className='bg-bank-ic d-inline-flex mb-2' style={{padding: "6px 12px"}}>
-                  <img src={BRI} alt="bca.png" width={72} />
+                  <img src={BRI} alt="bca.png" width={80} />
                 </div>
                 <br />
                 038701042679508
