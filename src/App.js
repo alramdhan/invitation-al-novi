@@ -600,7 +600,7 @@ function App() {
                 </div>
                 <br />
                 038701042679508
-                <Button className='btn btn-outline bg-transparent border-0' onClick={() => copyToClipboard("7360721269")}>
+                <Button className='btn btn-outline bg-transparent border-0' onClick={() => copyToClipboard("038701042679508")}>
                   <FontAwesomeIcon icon={faCopy} />
                 </Button><br />
                 Dika Alfarell Haidir
