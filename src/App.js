@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import './App.css';
 import 'animate.css';
+import Moment from 'moment';
+import 'moment/locale/id';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -38,10 +40,25 @@ import Mandiri from './images/mandiri.svg';
 import BRI from './images/bri.png';
 import song from './audio/You-Are-The-One.mp3';
 import { Badge, Button, Card, Form, Toast, ToastContainer } from 'react-bootstrap';
-import axios from 'axios';
+// import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, set, onValue } from "firebase/database";
 import Swal from 'sweetalert2';
 
-const baseUrl = "https://invitation-alnovi.000webhostapp.com/api";
+// const baseUrl = "https://invitation-alnovi.000webhostapp.com/api";
+const dateAcara = new Date("2024-01-01T09:00:00Z");
+const firebaseConfig = {
+  apiKey: "AIzaSyCW3aRCgbuVwqUEUHyPwkYy55LP9zRF0Rw",
+  authDomain: "invitation-20a5a.firebaseapp.com",
+  projectId: "invitation-20a5a",
+  storageBucket: "invitation-20a5a.firebasestorage.app",
+  messagingSenderId: "151614626355",
+  appId: "1:151614626355:web:4a845c8e3677427453e146",
+  databaseURL: 'https://invitation-20a5a-default-rtdb.firebaseio.com'
+};
+const firebaseApp = initializeApp(firebaseConfig);
+const database = getDatabase(firebaseApp);
 
 function App() {
   const colorAvatar = [
@@ -59,11 +76,21 @@ function App() {
   useEffect(() => {
     AOS.init();
     fetchUcapan();
+    Moment().locale('id');
   }, []);
 
   const fetchUcapan = () => {
-    axios.get(`${baseUrl}/v1/getUcapan`).then((response) => {
-      setUcapan(response.data);
+    // axios.get(`${baseUrl}/v1/getUcapan`).then((response) => {
+    //   setUcapan(response.data);
+    // });
+    const u = ref(database, 'ucapan/');
+    onValue(u, (snapshot) => {
+      const data = snapshot.val();
+      if(data != null) {
+        const ucapans = Object.entries(data);
+        console.log("data", ucapans);
+        setUcapan(ucapans);
+      }
     });
   }
 
@@ -78,41 +105,59 @@ function App() {
   }
 
   const kirimUcapan = () => {
-    const formData = new FormData();
-    const nama = document.getElementById("txt-nama");
-    const ucapan = document.getElementById("txt-ucapan");
-    if(nama.value === '' || ucapan.value === '' || selectedAbsen === -1) {
+    const namaValue = document.getElementById("txt-nama");
+    const ucapanValue = document.getElementById("txt-ucapan");
+    if(namaValue.value === '' || ucapanValue.value === '' || selectedAbsen === -1) {
       Swal.fire({
         title: "Peringatan",
         text: "Form ucapan tidak boleh kosong",
         icon: 'info',
       });
     } else {
-      formData.append("nama_tamu", nama.value);
-      formData.append("ucapan", ucapan.value);
-      formData.append("absen", selectedAbsen);
+      set(ref(database, 'ucapan/' + uuidv4()), {
+        nama_tamu: namaValue.value,
+        ucapan: ucapanValue.value,
+        tanggal: Moment().toString(),
+        absen: selectedAbsen
+      });
+      Swal.fire({
+        title: "Terkirim",
+        text: "Terima kasih untuk ucapan dan do'a nya ^^",
+        icon: 'success',
+      }).then((result) => {
+        if(result.isConfirmed) {
+          namaValue.value = "";
+          ucapanValue.value = "";
+          setSelectedAbsen(-1);
+          document.getElementById("txt-absen").value = "";
+          fetchUcapan();
+        }
+      });
+      // formData.append("nama_tamu", nama.value);
+      // formData.append("ucapan", ucapan.value);
+      // formData.append("absen", selectedAbsen);
       
-      axios.post(`${baseUrl}/v1/addUcapan`, formData, {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }).then((response) => {
-        if(response.data["response_code"] === 201) {
-          Swal.fire({
-            title: "Terkirim",
-            text: "Terima kasih untuk ucapan dan do'a nya ^^",
-            icon: 'success',
-          }).then((result) => {
-            if(result.isConfirmed) {
-              nama.value = "";
-              ucapan.value = "";
-              setSelectedAbsen(-1);
-              document.getElementById("txt-absen").value = "";
-              fetchUcapan();
-            }
-          });
-        }
-      }).catch((e) => console.error("e", e));
+      // axios.post(`${baseUrl}/v1/addUcapan`, formData, {
+      //   headers: {
+      //     "Content-Type": "application/json"
+      //   }
+      // }).then((response) => {
+      //   if(response.data["response_code"] === 201) {
+      //     Swal.fire({
+      //       title: "Terkirim",
+      //       text: "Terima kasih untuk ucapan dan do'a nya ^^",
+      //       icon: 'success',
+      //     }).then((result) => {
+      //       if(result.isConfirmed) {
+      //         nama.value = "";
+      //         ucapan.value = "";
+      //         setSelectedAbsen(-1);
+      //         document.getElementById("txt-absen").value = "";
+      //         fetchUcapan();
+      //       }
+      //     });
+      //   }
+      // }).catch((e) => console.error("e", e));
     }
   }
 
@@ -120,7 +165,7 @@ function App() {
     setSelectedAbsen(parseInt(e.target.value));
   }
 
-  const until = "2024-06-23T09:00:00";
+  const until = "2026-01-01T09:00:00";
   const count = (new Date(until)).getTime();
   
   setInterval(() => {
@@ -233,19 +278,19 @@ function App() {
                 borderTop: "2px solid #800020",
                 borderBottom: "2px solid #800020",
                 minWidth: "80px"
-              }}>Minggu</p><br />
+              }}>{Moment(dateAcara).format('dddd')}</p><br />
               &nbsp;&nbsp;&nbsp;&nbsp;
               <p style={{
                 borderLeft: "2px solid #800020",
                 borderRight: "2px solid #800020",
                 padding: 10,
-              }}>23<br />Juni</p>
+              }}>{Moment(dateAcara).format('DD')}<br />{Moment(dateAcara).format('MMM')}</p>
               &nbsp;&nbsp;&nbsp;&nbsp;
               <p style={{
                 borderTop: "2px solid #800020",
                 borderBottom: "2px solid #800020",
                 minWidth: "80px"
-              }}>&nbsp;&nbsp;2024&nbsp;&nbsp;</p>
+              }}>&nbsp;&nbsp;{Moment(dateAcara).format('yyyy')}&nbsp;&nbsp;</p>
             </div>
 
             <a className="btn btn-sm shadow btn-outline-burgundy rounded-pill px-3 my-2" id="btn-save-the-date" target="_blank" rel='noreferrer' href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTh0ZGU5ZzVwa28xdnBndTdwMmZxYnNhNnIgZjdiYjBmNmJlYzI5Y2NkNmM2ZDJjYThlOTg2MDhhYjM2NTgwZDRmMDExNmQ1YWVhMGY3ZDY3N2ZlNzQ0YjNmY0Bn&tmsrc=f7bb0f6bec29ccd6c6d2ca8e98608ab36580d4f0116d5aea0f7d677fe744b3fc%40group.calendar.google.com">
@@ -361,7 +406,7 @@ function App() {
           <div className='text-center'>
             <h1 className='font-esthetic'>Our Wedding</h1>
             <h1 data-aos="zoom-in" data-aos-duration="1500">Waktu Menuju Acara</h1>
-            <h5 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1500" className='text-secondary'>23/06/2024</h5>
+            <h5 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1500" className='text-secondary'>{Moment(dateAcara).format('DD/MM/yyyy')}</h5>
             <div  data-aos="zoom-in" data-aos-delay="750" data-aos-duration="1500" style={{
               border: "2px solid #BF9B73",
               borderRadius: "75px",
@@ -461,8 +506,8 @@ function App() {
                     </td>
                     <td align='center' valign='middle' className='col-6'>
                       <FontAwesomeIcon icon={faCalendar} /><br />
-                      Minggu<br />
-                      23 Juni 2024
+                      {Moment(dateAcara).format('dddd')}<br />
+                      {Moment(dateAcara).format('DD MMM yyyy')}
                     </td>
                   </tr>
                   <tr className='row'>
@@ -503,8 +548,8 @@ function App() {
                     </td>
                     <td align='center' valign='middle' className='col-6'>
                       <FontAwesomeIcon icon={faCalendar} /><br />
-                      Minggu<br />
-                      23 Juni 2024
+                      {Moment(dateAcara).format('dddd')}<br />
+                      {Moment(dateAcara).format('DD MMM yyyy')}
                     </td>
                   </tr>
                   <tr className='row'>
@@ -644,7 +689,7 @@ function App() {
         <section className="bg2" id="ucapan" style={{paddingBottom: 180}}>
           <div data-aos="flip-right" data-aos-delay="500" data-aos-duration="2000" className='text-center'>
             <div className='container-ucapan'>
-              <p>{ ucapan != null ? ucapan.data.length + " Comment" : "0 Comment"}</p>
+              <p>{ ucapan != null ? ucapan.length + " Comment" : "0 Comment"}</p>
               <hr style={{color: "#EDECF1"}} />
               <h1 className='font-esthetic text-secondary'>Ucapan & do&apos;a</h1>
               <p>Kirimkan Do&apos;a & Ucapan Untuk Kedua Mempelai</p>
@@ -669,10 +714,10 @@ function App() {
               <div id="container-kumpulan-ucapan" className='mt-4'>
                 <table id='table-kumpulan-ucapan' className='w-100'>
                   <tbody>
-                    {ucapan != null ? ucapan.data.map((u) => {
-                      const badge = u.absen === 1 ? <Badge bg='success' className='pb-0' style={{fontSize: ".75rem"}}>Hadir</Badge> : <Badge bg='danger' className='pb-0' style={{fontSize: ".75rem"}}>Tidak Hadir</Badge>;
-                      console.log("da", u.tanggal);
-                      const name = u.nama_tamu.split(" ");
+                    {ucapan != null ? ucapan.map((u) => {
+                      const badge = u[1].absen === 1 ? <Badge bg='success' className='pb-0' style={{fontSize: ".75rem"}}>Hadir</Badge> : <Badge bg='danger' className='pb-0' style={{fontSize: ".75rem"}}>Tidak Hadir</Badge>;
+                      console.log("da", u[1].tanggal);
+                      const name = u[1].nama_tamu.split(" ");
                       var avatar = "";
                       if(name.length === 1) {
                         avatar = name[0].substring(0, 1).toUpperCase();
@@ -682,7 +727,7 @@ function App() {
                       const bg = colorAvatar[Math.floor(Math.random() * 6)]
                       const colorText = colorAvatar.indexOf(bg) <= 3 ? "#020202" : "#FFF";
                       return (
-                        <tr key={u.id}>
+                        <tr key={u[0]}>
                           <td colSpan={2}>
                             <div className='kotak-ucapannya mb-2'>
                               <table style={{width: "100%"}}>
@@ -694,17 +739,17 @@ function App() {
                                       </div>
                                     </td>
                                     <td>
-                                      <h5 className='mb-0' style={{"color": "#683448"}}>{u.nama_tamu}&nbsp;&nbsp;&nbsp;{badge}</h5>
+                                      <h5 className='mb-0' style={{"color": "#683448"}}>{u[1].nama_tamu}&nbsp;&nbsp;&nbsp;{badge}</h5>
                                       <div style={{fontSize: ".8rem", color: "#6C6170"}}>
                                         <img src={Clock} alt="pending" width={11} height={11} />
-                                        <span>&nbsp;&nbsp;{timeSince(new Date(u.tanggal))}</span>
+                                        <span>&nbsp;&nbsp;{timeSince(new Date(u[1].tanggal))}</span>
                                       </div>
                                       <hr className='mb-2 m-0 p-0' />
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>
-                                      <p style={{color: "#200220"}}>{u.ucapan}</p>
+                                      <p style={{color: "#200220"}}>{u[1].ucapan}</p>
                                     </td>
                                   </tr>
                                 </tbody>
