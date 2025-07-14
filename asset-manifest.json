@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/invitation-al-novi/static/css/main.830f771a.css",
-    "main.js": "/invitation-al-novi/static/js/main.5875e4a6.js",
-    "static/js/453.66636984.chunk.js": "/invitation-al-novi/static/js/453.66636984.chunk.js",
+    "main.css": "/invitation-al-novi/static/css/main.1e7577e3.css",
+    "main.js": "/invitation-al-novi/static/js/main.62c8f1f8.js",
+    "static/js/453.40063271.chunk.js": "/invitation-al-novi/static/js/453.40063271.chunk.js",
     "static/media/img-cincin.png": "/invitation-al-novi/static/media/img-cincin.eafb2cb1a90898c58ae9.png",
     "static/media/You-Are-The-One.mp3": "/invitation-al-novi/static/media/You-Are-The-One.4b17bced152b8e97610f.mp3",
     "static/media/bg-mempelai1.png": "/invitation-al-novi/static/media/bg-mempelai1.1a7a987edcbf80e95c84.png",
@@ -23,12 +23,12 @@
     "index.html": "/invitation-al-novi/index.html",
     "static/media/instagram.svg": "/invitation-al-novi/static/media/instagram.da7c8b906a74d96374903698f965002d.svg",
     "static/media/clock-regular.svg": "/invitation-al-novi/static/media/clock-regular.2a4403fa1ad992eb5acd2f0deeef390d.svg",
-    "main.830f771a.css.map": "/invitation-al-novi/static/css/main.830f771a.css.map",
-    "main.5875e4a6.js.map": "/invitation-al-novi/static/js/main.5875e4a6.js.map",
-    "453.66636984.chunk.js.map": "/invitation-al-novi/static/js/453.66636984.chunk.js.map"
+    "main.1e7577e3.css.map": "/invitation-al-novi/static/css/main.1e7577e3.css.map",
+    "main.62c8f1f8.js.map": "/invitation-al-novi/static/js/main.62c8f1f8.js.map",
+    "453.40063271.chunk.js.map": "/invitation-al-novi/static/js/453.40063271.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.830f771a.css",
-    "static/js/main.5875e4a6.js"
+    "static/css/main.1e7577e3.css",
+    "static/js/main.62c8f1f8.js"
   ]
 }
